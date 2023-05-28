@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://songulkiremitci.com/tr/sitemap.xml
+Sitemap: https://songulkiremitci.com/tr/sitemapindex.xml
