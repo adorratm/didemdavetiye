@@ -494,7 +494,6 @@ label {
 .main-menu {
     position: relative;
     z-index: 9;
-    margin-right: -70px;
 }
 
 .menu .sub-menu li {
@@ -1348,7 +1347,6 @@ label {
 }
 
 .slider-bg {
-    min-height: 800px !important;
     background-position: center bottom;
     background-size: cover;
     position: relative;
@@ -1398,7 +1396,6 @@ label {
 }
 
 .slider-bg2 {
-    min-height: 900px;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -1552,7 +1549,7 @@ label {
 
 .slider-active .slick-arrow {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     left: 5%;
     color: #00163b;
@@ -1801,7 +1798,6 @@ label {
 
 .s-about-img img {
     margin-top: 50px;
-    margin-left: 50px;
 }
 
 .about-img {
@@ -6865,9 +6861,11 @@ section:hover .section-title h2::before {
     width: 250px;
     z-index: 1;
     padding: 0;
-    margin-left: -255px;
+    margin-left: 250px;
     margin-top: 0;
     top: -3px;
+    overflow-y: auto;
+    max-height: 600px;
 }
 
 .main-menu .has-sub>ul>.has-sub:hover>ul {
@@ -6881,9 +6879,11 @@ section:hover .section-title h2::before {
     width: 250px;
     z-index: 1;
     padding: 0;
-    margin-left: 255px;
+    margin-right: 250px;
     margin-top: 0;
     top: -3px;
+    overflow-y: auto;
+    max-height: 600px;
 }
 
 .main-menu .has-sub>ul>.has-sub>ul>.has-sub:hover>ul {

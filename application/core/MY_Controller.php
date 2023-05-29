@@ -70,7 +70,7 @@ class MY_Controller extends CI_Controller
         $this->viewData->footer_menus2 = show_tree('FOOTER2', $this->viewData->lang);
         $this->viewData->footer_menus3 = show_tree('FOOTER3', $this->viewData->lang);
         $this->viewData->footer_services = $this->general_model->get_all("services", null, null, ["isActive" => 1], [], [], [6]);
-        $this->viewData->footer_products = $this->general_model->get_all("products", null, null, ["isActive" => 1], [], [], [6]);
+        $this->viewData->footer_products = $this->general_model->get_all("product_categories", null, null, ["isActive" => 1, "top_id" => 0], [], [], [7]);
         $this->viewData->languages = $languages;
         /**
          * Home Items

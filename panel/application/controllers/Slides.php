@@ -58,9 +58,11 @@ class Slides extends MY_Controller
         $viewData = new stdClass();
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "add";
-        $viewData->pages = $this->general_model->get_all("pages",null,"rank ASC", ["isActive" => 1]);
-        $viewData->categories = $this->general_model->get_all("service_categories",null,"rank ASC", ["isActive" => 1]);
-        $viewData->services = $this->general_model->get_all("services s","s.id,s.title","s.rank ASC", ["s.isActive" => 1,"si.isCover" => 1],[],["service_categories sc" => ["s.category_id = sc.id", "left"], "service_images si" => ["si.service_id = s.id", "left"]],[],[],true,["s.id"]);
+        $viewData->pages = $this->general_model->get_all("pages", null, "rank ASC", ["isActive" => 1]);
+        $viewData->categories = $this->general_model->get_all("service_categories", null, "rank ASC", ["isActive" => 1]);
+        $viewData->product_categories = $this->general_model->get_all("product_categories", null, "rank ASC", ["isActive" => 1]);
+        $viewData->services = $this->general_model->get_all("services s", "s.id,s.title", "s.rank ASC", ["s.isActive" => 1, "si.isCover" => 1], [], ["service_categories sc" => ["s.category_id = sc.id", "left"], "service_images si" => ["si.service_id = s.id", "left"]], [], [], true, ["s.id"]);
+        $viewData->products = $this->general_model->get_all("products s", "s.id,s.title", "s.rank ASC", ["s.isActive" => 1, "si.isCover" => 1], [], ["product_categories sc" => ["s.category_id = sc.id", "left"], "product_images si" => ["si.product_id = s.id", "left"]], [], [], true, ["s.id"]);
         $viewData->settings = $this->general_model->get_all("settings", null, null, ["isActive" => 1]);
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/content", $viewData);
     }
@@ -82,14 +84,14 @@ class Slides extends MY_Controller
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Slayt Eklenirken Hata Oluştu. Slayt Görseli Seçtiğinizden Emin Olup, Lütfen Tekrar Deneyin."]);
             die();
         endif;
-        $image = upload_picture("img_url", "uploads/$this->viewFolder",["width" => 1920,"height" => 750],"*");
+        $image = upload_picture("img_url", "uploads/$this->viewFolder", ["width" => 1920, "height" => 750], "*");
         if ($image["success"]) :
             $data["img_url"] = $image["file_name"];
         else :
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Slayt Kaydı Yapılırken Hata Oluştu. Slayt Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
             die();
         endif;
-        $image = upload_picture("mobile_url", "uploads/$this->viewFolder",["width" => 1000,"height" => 1000],"*");
+        $image = upload_picture("mobile_url", "uploads/$this->viewFolder", ["width" => 1000, "height" => 1000], "*");
         if ($image["success"]) :
             $data["mobile_url"] = $image["file_name"];
         else :
@@ -112,9 +114,11 @@ class Slides extends MY_Controller
         $viewData->viewFolder = $this->viewFolder;
         $viewData->subViewFolder = "update";
         $viewData->item = $this->slide_model->get(["id" => $id]);
-        $viewData->pages = $this->general_model->get_all("pages",null,"rank ASC", ["isActive" => 1]);
-        $viewData->categories = $this->general_model->get_all("service_categories",null,"rank ASC", ["isActive" => 1]);
-        $viewData->services = $this->general_model->get_all("services s","s.id,s.title","s.rank ASC", ["s.isActive" => 1,"si.isCover" => 1],[],["service_categories sc" => ["s.category_id = sc.id", "left"], "service_images si" => ["si.service_id = s.id", "left"]],[],[],true,["s.id"]);
+        $viewData->pages = $this->general_model->get_all("pages", null, "rank ASC", ["isActive" => 1]);
+        $viewData->categories = $this->general_model->get_all("service_categories", null, "rank ASC", ["isActive" => 1]);
+        $viewData->product_categories = $this->general_model->get_all("product_categories", null, "rank ASC", ["isActive" => 1]);
+        $viewData->services = $this->general_model->get_all("services s", "s.id,s.title", "s.rank ASC", ["s.isActive" => 1, "si.isCover" => 1], [], ["service_categories sc" => ["s.category_id = sc.id", "left"], "service_images si" => ["si.service_id = s.id", "left"]], [], [], true, ["s.id"]);
+        $viewData->products = $this->general_model->get_all("products s", "s.id,s.title", "s.rank ASC", ["s.isActive" => 1, "si.isCover" => 1], [], ["product_categories sc" => ["s.category_id = sc.id", "left"], "product_images si" => ["si.product_id = s.id", "left"]], [], [], true, ["s.id"]);
         $viewData->settings = $this->general_model->get_all("settings", null, null, ["isActive" => 1]);
         $this->load->view("{$viewData->viewFolder}/{$viewData->subViewFolder}/content", $viewData);
     }
@@ -130,7 +134,7 @@ class Slides extends MY_Controller
         endif;
         $data["img_url"] = $slide->img_url;
         if (!empty($_FILES["img_url"]["name"])) :
-            $image = upload_picture("img_url", "uploads/$this->viewFolder",["width" => 1920,"height" => 750],"*");
+            $image = upload_picture("img_url", "uploads/$this->viewFolder", ["width" => 1920, "height" => 750], "*");
             if ($image["success"]) :
                 $data["img_url"] = $image["file_name"];
                 if (!empty($slide->img_url)) :
@@ -145,7 +149,7 @@ class Slides extends MY_Controller
         endif;
         $data["mobile_url"] = $slide->mobile_url;
         if (!empty($_FILES["mobile_url"]["name"])) :
-            $image = upload_picture("img_url", "uploads/$this->viewFolder",["width" => 1000,"height" => 1000],"*");
+            $image = upload_picture("img_url", "uploads/$this->viewFolder", ["width" => 1000, "height" => 1000], "*");
             if ($image["success"]) :
                 $data["mobile_url"] = $image["file_name"];
                 if (!empty($slide->img_url)) :

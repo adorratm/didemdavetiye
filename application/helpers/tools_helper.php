@@ -887,28 +887,19 @@ function in_parent($in_parent = null, $position = null, $lang = null, $store_all
                 endif;
             endif;
             if ($value->showCategories) :
-                $services = $t->general_model->get_all("services", "title,seo_url,id", "rank ASC", ["isActive" => 1, "lang" => $lang],[],[],[12]);
-                if (!empty($services)) :
+                $service_categories = $t->general_model->get_all("service_categories", "title,seo_url,id", "rank ASC", ["isActive" => 1, "lang" => $lang], [], [], [12]);
+                if (!empty($service_categories)) :
                     $html .= "<ul>";
-                    foreach ($services as $sKey => $sValue) :
+                    foreach ($service_categories as $sKey => $sValue) :
                         $html .= '<li>';
-                        $html .= '<a rel="dofollow" ' . (($position == "MOBILE" || $position == "HEADER") && in_array($sValue->id, $store_all_id) ? ((!empty($sValue->seo_url) && ($t->uri->segment(2) == strto("lower", seo($sValue->seo_url)) || $t->uri->segment(3) == strto("lower", seo($sValue->seo_url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($sValue->title)) || ($t->uri->segment(2) === null && $sValue->seo_url === '/') ? "class='ps-xl-4 current'" : "class='ps-xl-4 '") : ((!empty($sValue->seo_url) && ($t->uri->segment(2) == strto("lower", seo($sValue->seo_url)) || $t->uri->segment(3) == strto("lower", seo($sValue->seo_url)))) || ($t->uri->segment(2) === null && $sValue->seo_url === '/') || $t->uri->segment(2) == strto("lower", seo($sValue->title)) || $t->uri->segment(3) == strto("lower", seo($sValue->title)) ? "class='ps-xl-4 current'" : "class='ps-xl-4 '")) . ' href="' . base_url(lang("routes_services") . "/" . lang("routes_service") . "/" . $sValue->seo_url) . '" target="' . $value->target . '" title="' . $sValue->title . '">' . @htmlspecialchars_decode(strto("lower|ucwords", $sValue->title)) . '</a>';
+                        $html .= '<a rel="dofollow" ' . (($position == "MOBILE" || $position == "HEADER") && in_array($sValue->id, $store_all_id) ? ((!empty($sValue->seo_url) && ($t->uri->segment(2) == strto("lower", seo($sValue->seo_url)) || $t->uri->segment(3) == strto("lower", seo($sValue->seo_url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($sValue->title)) || ($t->uri->segment(2) === null && $sValue->seo_url === '/') ? "class='ps-xl-4 current'" : "class='ps-xl-4 '") : ((!empty($sValue->seo_url) && ($t->uri->segment(2) == strto("lower", seo($sValue->seo_url)) || $t->uri->segment(3) == strto("lower", seo($sValue->seo_url)))) || ($t->uri->segment(2) === null && $sValue->seo_url === '/') || $t->uri->segment(2) == strto("lower", seo($sValue->title)) || $t->uri->segment(3) == strto("lower", seo($sValue->title)) ? "class='ps-xl-4 current'" : "class='ps-xl-4 '")) . ' href="' . base_url(lang("routes_services") . "/" . $sValue->seo_url) . '" target="' . $value->target . '" title="' . $sValue->title . '">' . @htmlspecialchars_decode(strto("lower|ucwords", $sValue->title)) . '</a>';
                         $html .= '</li>';
                     endforeach;
                     $html .= "</ul>";
                 endif;
             endif;
             if ($value->showProductCategories) :
-                $products = $t->general_model->get_all("products", "title,seo_url,id", "rank ASC", ["isActive" => 1, "lang" => $lang],[],[],[12]);
-                if (!empty($products)) :
-                    $html .= "<ul>";
-                    foreach ($products as $sKey => $sValue) :
-                        $html .= '<li>';
-                        $html .= '<a rel="dofollow" ' . (($position == "MOBILE" || $position == "HEADER") && in_array($sValue->id, $store_all_id) ? ((!empty($sValue->seo_url) && ($t->uri->segment(2) == strto("lower", seo($sValue->seo_url)) || $t->uri->segment(3) == strto("lower", seo($sValue->seo_url)))) || $t->uri->segment(2) == strto("lower", seo($value->title)) || $t->uri->segment(3) == strto("lower", seo($sValue->title)) || ($t->uri->segment(2) === null && $sValue->seo_url === '/') ? "class='ps-xl-4 current'" : "class='ps-xl-4 '") : ((!empty($sValue->seo_url) && ($t->uri->segment(2) == strto("lower", seo($sValue->seo_url)) || $t->uri->segment(3) == strto("lower", seo($sValue->seo_url)))) || ($t->uri->segment(2) === null && $sValue->seo_url === '/') || $t->uri->segment(2) == strto("lower", seo($sValue->title)) || $t->uri->segment(3) == strto("lower", seo($sValue->title)) ? "class='ps-xl-4 current'" : "class='ps-xl-4 '")) . ' href="' . base_url(lang("routes_products") . "/" . lang("routes_product") . "/" . $sValue->seo_url) . '" target="' . $value->target . '" title="' . $sValue->title . '">' . @htmlspecialchars_decode(strto("lower|ucwords", $sValue->title)) . '</a>';
-                        $html .= '</li>';
-                    endforeach;
-                    $html .= "</ul>";
-                endif;
+                $html .= show_cat_tree($lang);
             endif;
             $html .= in_parent($value->id, $position, $lang, $store_all_id);
             $html .= "</li>";
@@ -923,7 +914,45 @@ function in_parent($in_parent = null, $position = null, $lang = null, $store_all
  * ...:::!!! ================================== MENU =================================== !!!:::...
  * -----------------------------------------------------------------------------------------------
  */
+function show_cat_tree($lang = 'tr')
+{
+    $t = &get_instance();
+    // create array to store all menus ids
+    $store_all_id = array();
+    // get all parent menus ids by using isactive
+    $id_result = $t->general_model->get_all("product_categories", "top_id", "rank ASC", ["isActive" => 1, "lang" => $lang]);
+    // loop through all menus to save parent ids $store_all_id array
+    foreach ($id_result as $menu_id) {
+        array_push($store_all_id, $menu_id->top_id);
+    }
+    // return all hierarchical tree data from in_parent by sending
+    //  initiate parameters 0 is the main parent,blog id, all parent ids
+    return  show_product_categories(0, $lang, $store_all_id);
+}
 
+
+/**
+ * recursive function to loop
+ * through all comments and retrieve it
+ */
+function show_product_categories($top_id = 0, $lang = "tr", $store_all_id = [])
+{
+    $t = &get_instance();
+    // this variable to save all concatenated html
+    $html = "";
+    // build hierarchy  html structure based on ul li (parent-child) nodes
+    $result = $t->general_model->get_all("product_categories", "top_id,title,seo_url,id", "rank ASC", ["isActive" => 1, "lang" => $lang, "top_id" => $top_id]);
+    $html .=  '<ul>';
+    foreach ($result as $key => $value) :
+        $html .= '<li ' . (in_array($value->id, $store_all_id) ? "class='has-sub'" : null) . '>';
+        $html .= '<a rel="dofollow" ' .
+            ($t->uri->segment(3) == $value->seo_url ? "class='current'" : "class=''") . ' href="' . base_url(lang("routes_products") . "/{$value->seo_url}") . '" title="' . $value->title . '">' . $value->title . '</a>';
+        $html .= show_product_categories($value->id, $lang, $store_all_id);
+        $html .= "</li>";
+    endforeach;
+    $html .=  "</ul>";
+    return $html;
+}
 
 /**
  * recursive function to loop

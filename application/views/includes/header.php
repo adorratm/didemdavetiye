@@ -93,18 +93,25 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-7">
+                    <div class="col-xl-8 col-lg-8">
 
-                        <div class="main-menu text-center text-xl-right">
+                        <div class="main-menu text-center text-xl-center">
                             <nav id="mobile-menu">
                                 <?= $menus ?>
                             </nav>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-3 d-none d-lg-block mt-25 mb-25">
+                    <div class="col-xl-2 col-lg-2 d-none d-lg-block mt-25 mb-25">
                         <div class="right-menu">
                             <ul>
                                 <li>
+                                    <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
+                                        <picture>
+                                            <img width="250" height="58" data-src="<?= get_picture("settings_v", $settings->mobile_logo_2) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
+                                        </picture>
+                                    </a>
+                                </li>
+                                <li class="d-none">
                                     <div class="icon"><img loading="lazy" class="lazyload" data-src="<?= asset_url("public/images/bg/top-m-icon.webp") ?>" alt="<?= lang("callUs") ?> !"></div>
                                     <div class="text">
                                         <span><?= lang("callUs") ?> !</span>

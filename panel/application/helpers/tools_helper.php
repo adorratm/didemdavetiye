@@ -937,3 +937,19 @@ function curl_request($url = null, $port = null, $endpoint = null, $data = [], $
 
     return $result;
 }
+
+
+function Cats($query, $mainid = 0, $level = 0, $selected = null)
+{
+    foreach ($query as $category) {
+        if ($category->top_id == $mainid) {
+            echo '<option value=' . $category->id . ' ' . ($category->id == $selected ? "selected" : null) . '>';
+            if ($category->id != 0) {
+                echo str_repeat('-', $level);
+            }
+            echo $category->title;
+            echo '</option>';
+            echo Cats($query, $category->id, ($category->top_id === 0) ? 1 : ($level + 1));
+        }
+    }
+}

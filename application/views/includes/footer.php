@@ -93,7 +93,7 @@
                                 <ul>
                                     <?php foreach ($footer_products as $key => $value) : ?>
                                         <li>
-                                            <a rel="dofollow" title="<?= $value->title ?>" href="<?= base_url(lang("routes_products") . "/" . lang("routes_product") . "/" . $value->seo_url) ?>"><?= $value->title ?></a>
+                                            <a rel="dofollow" title="<?= $value->title ?>" href="<?= base_url(lang("routes_products") . "/" . $value->seo_url) ?>"><?= $value->title ?></a>
                                         </li>
                                     <?php endforeach ?>
                                 </ul>
@@ -101,18 +101,26 @@
                         </div>
                     </div>
                 <?php endif ?>
-                <div class="col-xl-3 col-lg-3 col-sm-6">
-                    <div class="footer-widget mb-30">
-                        <div class="f-widget-title">
-                            <h2><?= lang("contactWithUs") ?></h2>
-                        </div>
-                        <div class="footer-link">
-                            <p><a rel="dofollow" href="<?= base_url(lang("routes_contact")) ?>" title="<?= lang("address") ?>"><?= @json_decode($settings->address, true)[0] ?></a></p>
-                        </div>
+                <?php if (!empty(@json_decode($settings->address, TRUE))) : ?>
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2><?= lang("contactWithUs") ?></h2>
+                            </div>
+                            <div class="footer-link">
+                                <ul>
+                                    <?php foreach (@json_decode($settings->address, TRUE) as $key => $value) : ?>
+                                        <li>
+                                            <a rel="dofollow" href="<?= base_url(lang("routes_contact")) ?>" title="<?= lang("address") ?>"><?= @json_decode($settings->address_title, TRUE)[$key] ?> : <?= $value ?></a>
+                                            <a href="tel:<?= @str_replace(" ", "", @@json_decode($settings->phone, TRUE)[$key]) ?>" rel="dofollow" title="<?= lang("phone") ?>"><?= @json_decode($settings->phone, TRUE)[$key] ?></a>
+                                        </li>
+                                    <?php endforeach ?>
+                                </ul>
+                            </div>
 
+                        </div>
                     </div>
-                </div>
-
+                <?php endif ?>
             </div>
         </div>
     </div>

@@ -93,7 +93,7 @@
                 <?php if (isAllowedViewModule("services")) { ?>
                     <li class="nav-item <?= ($this->uri->segment(1) == "services") || ($this->uri->segment(1) == "service_categories") ? "active" : "" ?>">
                         <a class="nav-link <?= ($this->uri->segment(1) == "services") || ($this->uri->segment(1) == "service_categories") ? "active" : "" ?>" href="javascript:void(0);" data-toggle="collapse" data-target="#services_nav">
-                            <i class="fa fa-dropbox"></i>
+                            <i class="fa fa-cog"></i>
                             <span class="nav-link-text">Hizmet İşlemleri</span>
                         </a>
                         <ul id="services_nav" class="nav flex-column collapse  <?= ($this->uri->segment(1) == "services") || ($this->uri->segment(1) == "service_categories") ? "show" : "" ?> collapse-level-1">
@@ -104,6 +104,26 @@
                                     </li>
                                     <li class="nav-item  <?= ($this->uri->segment(1) == "services") ? "active" : "" ?>">
                                         <a class="nav-link <?= ($this->uri->segment(1) == "services") ? "active" : "" ?>" href="<?= base_url("services"); ?>">Hizmetler</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                <?php } ?>
+                <?php if (isAllowedViewModule("products")) { ?>
+                    <li class="nav-item <?= ($this->uri->segment(1) == "products") || ($this->uri->segment(1) == "product_categories") ? "active" : "" ?>">
+                        <a class="nav-link <?= ($this->uri->segment(1) == "products") || ($this->uri->segment(1) == "product_categories") ? "active" : "" ?>" href="javascript:void(0);" data-toggle="collapse" data-target="#products_nav">
+                            <i class="fa fa-dropbox"></i>
+                            <span class="nav-link-text">Ürün İşlemleri</span>
+                        </a>
+                        <ul id="products_nav" class="nav flex-column collapse  <?= ($this->uri->segment(1) == "products") || ($this->uri->segment(1) == "product_categories") ? "show" : "" ?> collapse-level-1">
+                            <li class="nav-item <?= ($this->uri->segment(1) == "products") || ($this->uri->segment(1) == "product_categories") ? "active" : "" ?>">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item  <?= ($this->uri->segment(1) == "product_categories") ? "active" : "" ?>">
+                                        <a class="nav-link <?= ($this->uri->segment(1) == "product_categories") ? "active" : "" ?>" href="<?= base_url("product_categories"); ?>">Ürün Kategorileri</a>
+                                    </li>
+                                    <li class="nav-item  <?= ($this->uri->segment(1) == "products") ? "active" : "" ?>">
+                                        <a class="nav-link <?= ($this->uri->segment(1) == "products") ? "active" : "" ?>" href="<?= base_url("products"); ?>">Ürünlerimiz</a>
                                     </li>
                                 </ul>
                             </li>

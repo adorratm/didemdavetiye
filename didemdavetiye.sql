@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2023 at 11:41 PM
+-- Generation Time: May 29, 2023 at 04:40 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -790,7 +790,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `url`, `title`, `content`, `img_url`, `banner_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `sharedAt`, `type`) VALUES
-(1, 'hakkimizda', 'Hakkımızda', '<p>Mutfak Yapım olarak dijital medya ve prodüksiyon alanlarında faaliyet gösteren İzmir merkezli bir reklam şirketiyiz. Güçlü teknik kadromuzla yenilikçi, dinamik, verimli güvenilir bir takım ruhu anlayışında; kalite, zamanındalık ve müşteri memnuniyetinden taviz vermeden ticari bir firmanın ticari gelişimi, kendisini ve ürünlerini duyurması için gerekli tüm hizmetleri bünyemizde barındırarak optimal fiyatlarla hizmet vermekteyiz.<br><br>Müşteri memnuniyetini arttırmaya yönelik, müşterilerimizin mevcut ve gelecekteki beklentilerini karşılayacak biçimde, tüm çalışanlarımızın aktif görev aldığı bir takım ruhu ile teknolojik gelişmelere göre kendimizi yeniliyor ve siz değerli müşterilerimizin gelişimi için durmaksızın yaratıcı projeler üretmeye çalışıyoruz.<br><br>Kısacası medyanın tüm alanlarında doğabilecek her ihtiyacınıza yanıt vermek, sizi anlamak ve doğru bir şekilde anlatmak için buradayız.</p>', '7d5d3729b89770f37ce006ebd7b0a581.webp', '806d33c6f95a654691e5cf41c31cdc10.webp', 'tr', 1, 1, '2022-02-23 06:24:54', '2023-05-08 07:09:44', '2022-02-23 06:24:26', 'SIMPLE');
+(1, 'hakkimizda', 'Hakkımızda', '<p><strong>1954</strong></p>\r\n<p>1954 Yılında Namık Kemal ERDEM ve Eşi Esma ERDEM tarafından KARDEŞLER MATBAASI-GAZETECİLİK Firması Kuruldu.</p>\r\n<p>1954 Yılında KARDEŞLER MATBAASI-GAZETECİLİK’te Simav\'ın Sesi Gazetesi yayımlandı.</p>\r\n<p><strong>1957</strong></p>\r\n<p>1957 Yılında KARDEŞLER MATBAASI-GAZETECİLİK Matbaa Tesislerini Manisa’nın Demirci İlçesine Taşıdı. Demirci\'de İlk Matbaa Kurulmuş oldu.  Demirci’nin İlk Gazetesini  yayımladı.</p>\r\n<p><strong>1961</strong></p>\r\n<p>23 Nisan 1961 Tarihinde Namık Kemal ERDEM’in Vefatı nedeniyle İşi Esma ERDEM Devraldı. 6 Yaşında olan Oğlu Âli Cenap ERDEM ve 7. Yaşında olan Cengizhan ERDEM ile Matbaacılık ve Gazetecilik Mesleklerini  Devam ettirdi.</p>\r\n<p>1961 Yılından İtibaren</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK’te Sırasıyla</p>\r\n<p>Demirci Gerçek, Demirci\'nin Sesi; Hakiki Demirci\'nin Sesi, Milliyetçi Vatan, Manisa Selendi, İzmir Kemalpaşa; İzmir Torbalı, Simav Anadolu, Salihli Hamle, Demirci Hamle; Halıkent ve Gördes Bölge Gazetelerini Yayımlandı.</p>\r\n<p>Halıkent ve Gördes Gazeteleri Yayın Hayatına Hâlen Devam Ediyor.</p>\r\n<p><strong>2002</strong></p>\r\n<p>Firma Sahibi Esma ERDEM 30 Ocak 2002 Yılında Küçük oğlu Âli Cenap ERDEM’i Kaybetti.</p>\r\n<p><strong>2008</strong></p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Firma Sahibi; Sarı Basın Kartı Sahibi Esma ERDEM’e</p>\r\n<p><strong>2008</strong> Yılında Manisa Defterdarlığı Tarafından 2008 Yılında 47. Yılı Nedeniyle Teşekkür Belgesi verildi.</p>\r\n<p><strong>2013</strong> Yılında Esma ERDEM En çok Vergi Ödeyenler Listesinin 5. Sırasında Yer Aldı.</p>\r\n<p><strong>2017 </strong>Yılında Esma ERDEM “Türk Basınının Nene Hatunu” ünvanını Aldı.</p>\r\n<p><strong>2018 </strong>Yılında Esma ERDEM TRT\'nin Ömür Dediğin Programında Belgeseli Yayımlandı.</p>\r\n<p>Basın İlan Kurumu Tarafından “Duayen Gazeteciler” Programında “Türk Basınının Nene Hatunu Esma Erdem” Belgeseli Yapıldı.</p>\r\n<p>Çeşitli Kurumların Verdiği Ödüllerin Yanında Türkiye Basın Yayın Enformasyon Genel Müdürlüğü Tarafından Türkiye İkinciliği Ödülü Verildi.</p>\r\n<p><strong>2022</strong> Yılında Esma ERDEM’e “Yılın Ahisi” Ünvanı  verildi.</p>\r\n<p><strong>2022</strong> Yılı Ağustos Ayında İzmir Konak Alsancak’ta  KARDEŞLER MATBAASI-GAZETECİLİK olarak İzmir Matbaa Tesislerinin Açılışını Yaptı.</p>\r\n<p>1954 Yılından Bugüne KARDEŞLER MATBAASI-GAZETECİLİK  bünyesinde Onlarca Kişi Yetişti.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK  Hiç Aralık Vermeden 1954 Yılından Beri Çalışmalarına Devam Ederek Türk Ekonomisine Katkıda Bulunuyor.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Firma Sahibi  Esma ERDEM; Oğlu Cengizhan ERDEM ve Matbaa Öğretmenliği Mezunu Torunu Namık Kemal ERDEM İle Birlikte Üç Nesilden Beri  Matbaacılık ve Gazetecilik Mesleğini Devam Ettiriyor.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Manisa ve İzmir’deki  Basım tesislerinde yapmış olduğu; Temiz ve Kaliteli ürünleri ile Müşterilerinden aldığı destek ve güç ile \"<strong>DİDEM DAVETİYE\" </strong>Markası’nı  oluşturmuştur.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK  Manisa ve İzmir’deki Matbaa Tesisleri ile Basım Hizmetlerini Üretim Sürecine Göre Hızlı ve Kaliteli Olarak Üretmek İçin Çalışacaktır.</p>\r\n<p>1954’den Bugüne <strong>ÜRETEN BİR MATBAA</strong> olan <strong>KARDEŞLER MATBAASI-GAZETECİLİK </strong> “Sizlerin de Desteği İle Devam Edecektir.”</p>\r\n<p><strong>“DİDEM DAVETİYE”</strong></p>', '7d5d3729b89770f37ce006ebd7b0a581.webp', '806d33c6f95a654691e5cf41c31cdc10.webp', 'tr', 1, 1, '2022-02-23 06:24:54', '2023-05-29 11:27:32', '2022-02-23 06:24:26', 'SIMPLE');
 
 -- --------------------------------------------------------
 
@@ -803,7 +803,6 @@ CREATE TABLE `products` (
   `title` varchar(255) DEFAULT NULL,
   `description` longtext DEFAULT NULL,
   `seo_url` varchar(255) DEFAULT NULL,
-  `category_id` int(11) DEFAULT NULL,
   `lang` char(2) NOT NULL DEFAULT 'tr',
   `rank` bigint(20) NOT NULL DEFAULT 1,
   `isActive` tinyint(1) NOT NULL DEFAULT 1,
@@ -815,17 +814,37 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `title`, `description`, `seo_url`, `category_id`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
-(1, 'Bay-Bayan Lazer Epilasyon', NULL, 'bay-bayan-lazer-epilasyon', 1, 'tr', 1, 1, '2023-03-19 21:47:07', '2023-05-08 08:36:41'),
-(2, 'G5 Selülit Masajı', NULL, 'g5-selulit-masaji', 1, 'tr', 1, 1, '2023-03-19 21:47:07', '2023-05-08 08:36:52'),
-(3, 'Bölgesel Zayıflama', NULL, 'bolgesel-zayiflama', 1, 'tr', 3, 1, '2023-03-20 08:07:15', '2023-05-08 08:37:03'),
-(4, 'EMS İle Bölgesel Vücut Şekillendirme', NULL, 'ems-ile-bolgesel-vucut-sekillendirme', 1, 'tr', 4, 1, '2023-03-20 08:07:26', '2023-05-08 08:37:23'),
-(5, 'Medical Cilt Bakımı', NULL, 'medical-cilt-bakimi', 1, 'tr', 5, 1, '2023-03-20 08:07:34', '2023-05-08 08:37:33'),
-(6, 'Cilt Bakımı', NULL, 'cilt-bakimi', 1, 'tr', 6, 1, '2023-03-20 08:07:50', '2023-05-08 09:14:46'),
-(7, 'Medikal Masaj', NULL, 'medikal-masaj', 1, 'tr', 7, 1, '2023-03-20 08:08:00', '2023-05-08 09:14:48'),
-(8, 'Aroma Terapi', NULL, 'aroma-terapi', 1, 'tr', 8, 1, '2023-03-20 08:08:21', '2023-05-08 09:14:49'),
-(9, 'Sıcak Yağ Masajı', NULL, 'sicak-yag-masaji', 1, 'tr', 9, 1, '2023-03-20 08:08:34', '2023-05-08 09:14:51'),
-(10, 'İsveç Masajı', NULL, 'isvec-masaji', 1, 'tr', 10, 1, '2023-03-20 08:08:42', '2023-05-08 09:14:52');
+INSERT INTO `products` (`id`, `title`, `description`, `seo_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
+(1, 'Bay-Bayan Lazer Epilasyon', NULL, 'bay-bayan-lazer-epilasyon', 'tr', 1, 1, '2023-03-19 21:47:07', '2023-05-08 08:36:41'),
+(2, 'G5 Selülit Masajı', NULL, 'g5-selulit-masaji', 'tr', 1, 1, '2023-03-19 21:47:07', '2023-05-08 08:36:52'),
+(3, 'Bölgesel Zayıflama', NULL, 'bolgesel-zayiflama', 'tr', 3, 1, '2023-03-20 08:07:15', '2023-05-08 08:37:03'),
+(4, 'EMS İle Bölgesel Vücut Şekillendirme', NULL, 'ems-ile-bolgesel-vucut-sekillendirme', 'tr', 4, 1, '2023-03-20 08:07:26', '2023-05-08 08:37:23'),
+(5, 'Medical Cilt Bakımı', NULL, 'medical-cilt-bakimi', 'tr', 5, 1, '2023-03-20 08:07:34', '2023-05-08 08:37:33'),
+(6, 'Cilt Bakımı', NULL, 'cilt-bakimi', 'tr', 6, 1, '2023-03-20 08:07:50', '2023-05-08 09:14:46'),
+(7, 'Medikal Masaj', NULL, 'medikal-masaj', 'tr', 7, 1, '2023-03-20 08:08:00', '2023-05-08 09:14:48'),
+(8, 'Aroma Terapi', NULL, 'aroma-terapi', 'tr', 8, 1, '2023-03-20 08:08:21', '2023-05-08 09:14:49'),
+(9, 'Sıcak Yağ Masajı', NULL, 'sicak-yag-masaji', 'tr', 9, 1, '2023-03-20 08:08:34', '2023-05-08 09:14:51'),
+(10, 'İsveç Masajı', NULL, 'isvec-masaji', 'tr', 10, 1, '2023-03-20 08:08:42', '2023-05-08 09:14:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products_w_categories`
+--
+
+CREATE TABLE `products_w_categories` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products_w_categories`
+--
+
+INSERT INTO `products_w_categories` (`id`, `product_id`, `category_id`) VALUES
+(1, 1, 1),
+(2, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -835,6 +854,7 @@ INSERT INTO `products` (`id`, `title`, `description`, `seo_url`, `category_id`, 
 
 CREATE TABLE `product_categories` (
   `id` int(11) NOT NULL,
+  `top_id` int(11) DEFAULT 0,
   `title` longtext DEFAULT NULL,
   `seo_url` longtext DEFAULT NULL,
   `img_url` longtext DEFAULT NULL,
@@ -846,6 +866,83 @@ CREATE TABLE `product_categories` (
   `createdAt` timestamp NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `product_categories`
+--
+
+INSERT INTO `product_categories` (`id`, `top_id`, `title`, `seo_url`, `img_url`, `home_url`, `banner_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
+(1, 0, 'Matbaa Ürünleri', 'matbaa-urunleri', NULL, NULL, NULL, 'tr', 1, 1, '2023-05-29 11:54:48', '2023-05-29 11:54:48'),
+(2, 0, 'Davetiye', 'davetiye', NULL, NULL, NULL, 'tr', 2, 1, '2023-05-29 11:54:54', '2023-05-29 12:37:40'),
+(3, 0, 'Kitap Basımı', 'kitap-basimi', NULL, NULL, NULL, 'tr', 3, 1, '2023-05-29 11:55:00', '2023-05-29 12:37:42'),
+(4, 0, 'Dijital Baskı', 'dijital-baski', NULL, NULL, NULL, 'tr', 4, 1, '2023-05-29 11:55:07', '2023-05-29 12:37:44'),
+(5, 0, 'Serigrafi Baskı', 'serigrafi-baski', NULL, NULL, NULL, 'tr', 5, 1, '2023-05-29 11:55:16', '2023-05-29 12:37:45'),
+(6, 0, 'Promosyon Ürünler', 'promosyon-urunler', NULL, NULL, NULL, 'tr', 6, 1, '2023-05-29 11:55:24', '2023-05-29 12:37:46'),
+(7, 0, 'Kutu / Ambalaj', 'kutu-ambalaj', NULL, NULL, NULL, 'tr', 7, 1, '2023-05-29 11:55:30', '2023-05-29 12:37:48'),
+(8, 1, 'Maliye Anlaşmalı Belge', 'maliye-anlasmali-belge', NULL, NULL, NULL, 'tr', 8, 1, '2023-05-29 12:01:41', '2023-05-29 12:37:49'),
+(9, 1, 'Katalog', 'katalog', NULL, NULL, NULL, 'tr', 9, 1, '2023-05-29 12:35:39', '2023-05-29 12:37:51'),
+(10, 1, 'Dergi', 'dergi', NULL, NULL, NULL, 'tr', 10, 1, '2023-05-29 12:35:46', '2023-05-29 12:37:53'),
+(11, 1, 'Takvim', 'takvim', NULL, NULL, NULL, 'tr', 11, 1, '2023-05-29 12:35:54', '2023-05-29 12:37:56'),
+(12, 1, 'İmsakiye', 'imsakiye', NULL, NULL, NULL, 'tr', 12, 1, '2023-05-29 12:36:03', '2023-05-29 12:37:58'),
+(13, 1, 'Spiralli Ürünler', 'spiralli-urunler', NULL, NULL, NULL, 'tr', 13, 1, '2023-05-29 12:36:26', '2023-05-29 12:38:02'),
+(14, 1, 'Bloknot', 'bloknot', NULL, NULL, NULL, 'tr', 14, 1, '2023-05-29 12:36:34', '2023-05-29 12:38:04'),
+(15, 1, 'Küp Blok', 'kup-blok', NULL, NULL, NULL, 'tr', 15, 1, '2023-05-29 12:36:43', '2023-05-29 12:38:05'),
+(16, 1, 'Karton Çanta', 'karton-canta', NULL, NULL, NULL, 'tr', 16, 1, '2023-05-29 12:36:53', '2023-05-29 12:38:07'),
+(17, 1, 'Renkli Dijital', 'renkli-dijital', NULL, NULL, NULL, 'tr', 17, 1, '2023-05-29 12:37:01', '2023-05-29 12:38:09'),
+(18, 1, 'Etiket', 'etiket', NULL, NULL, NULL, 'tr', 18, 1, '2023-05-29 12:37:07', '2023-05-29 12:38:11'),
+(19, 1, 'Afiş', 'afis', NULL, NULL, NULL, 'tr', 19, 1, '2023-05-29 12:37:14', '2023-05-29 12:38:14'),
+(20, 1, 'Amerikan Servis', 'amerikan-servis', NULL, NULL, NULL, 'tr', 20, 1, '2023-05-29 12:37:24', '2023-05-29 12:38:16'),
+(21, 1, 'Antetli Kağıt', 'antetli-kagit', NULL, NULL, NULL, 'tr', 21, 1, '2023-05-29 12:39:13', '2023-05-29 12:39:13'),
+(22, 1, 'Broşür El İlanı İnsert', 'brosur-el-ilani-insert', NULL, NULL, NULL, 'tr', 22, 1, '2023-05-29 12:39:34', '2023-05-29 12:39:34'),
+(23, 1, 'Cepli Dosya', 'cepli-dosya', NULL, NULL, NULL, 'tr', 23, 1, '2023-05-29 13:36:46', '2023-05-29 13:36:46'),
+(24, 1, 'Zart', 'zart', NULL, NULL, NULL, 'tr', 24, 1, '2023-05-29 13:36:55', '2023-05-29 13:36:55'),
+(25, 1, 'Kartvizit', 'kartvizit', NULL, NULL, NULL, 'tr', 25, 1, '2023-05-29 13:37:02', '2023-05-29 13:37:02'),
+(26, 1, 'Magnet', 'magnet', NULL, NULL, NULL, 'tr', 26, 1, '2023-05-29 13:37:08', '2023-05-29 13:37:08'),
+(27, 1, 'Oto Paspas', 'oto-paspas', NULL, NULL, NULL, 'tr', 27, 1, '2023-05-29 13:37:20', '2023-05-29 13:37:20'),
+(28, 1, 'Adisyon', 'adisyon', NULL, NULL, NULL, 'tr', 28, 1, '2023-05-29 13:37:26', '2023-05-29 13:37:26'),
+(29, 1, 'Kaşe', 'kase', NULL, NULL, NULL, 'tr', 29, 1, '2023-05-29 13:37:32', '2023-05-29 13:37:32'),
+(30, 1, 'Menü', 'menu', NULL, NULL, NULL, 'tr', 30, 1, '2023-05-29 13:37:41', '2023-05-29 13:37:41'),
+(31, 1, 'Kırtasiye Ürünleri', 'kirtasiye-urunleri', NULL, NULL, NULL, 'tr', 31, 1, '2023-05-29 13:37:52', '2023-05-29 13:37:52'),
+(32, 2, 'Düğün', 'dugun', NULL, NULL, NULL, 'tr', 32, 1, '2023-05-29 13:38:08', '2023-05-29 13:38:08'),
+(33, 2, 'Kına / Nişan', 'kina-nisan', NULL, NULL, NULL, 'tr', 33, 1, '2023-05-29 13:38:20', '2023-05-29 13:38:20'),
+(34, 2, 'Sünnet', 'sunnet', NULL, NULL, NULL, 'tr', 34, 1, '2023-05-29 13:38:26', '2023-05-29 13:38:26'),
+(35, 2, 'Yılbaşı Tebrik', 'yilbasi-tebrik', NULL, NULL, NULL, 'tr', 35, 1, '2023-05-29 13:38:33', '2023-05-29 13:38:33'),
+(36, 2, 'Açılış', 'acilis', NULL, NULL, NULL, 'tr', 36, 1, '2023-05-29 13:38:42', '2023-05-29 13:38:42'),
+(37, 2, 'Özel Program', 'ozel-program', NULL, NULL, NULL, 'tr', 37, 1, '2023-05-29 13:38:49', '2023-05-29 13:38:49'),
+(38, 2, 'Hediyelik', 'hediyelik', NULL, NULL, NULL, 'tr', 38, 1, '2023-05-29 13:38:55', '2023-05-29 13:38:55'),
+(39, 2, 'Davetiye Sözleri', 'davetiye-sozleri', NULL, NULL, NULL, 'tr', 39, 1, '2023-05-29 13:39:07', '2023-05-29 13:39:07'),
+(40, 2, 'Teşekkür Kartları', 'tesekkur-kartlari', NULL, NULL, NULL, 'tr', 40, 1, '2023-05-29 13:39:17', '2023-05-29 13:39:17'),
+(41, 2, 'Karşılama Panosu', 'karsilama-panosu', NULL, NULL, NULL, 'tr', 41, 1, '2023-05-29 13:39:29', '2023-05-29 13:39:29'),
+(42, 2, 'Davetiye Zarfı', 'davetiye-zarfi', NULL, NULL, NULL, 'tr', 42, 1, '2023-05-29 13:39:36', '2023-05-29 13:39:36'),
+(43, 2, 'Özel Sipariş', 'ozel-siparis', NULL, NULL, NULL, 'tr', 43, 1, '2023-05-29 13:39:42', '2023-05-29 13:39:42'),
+(44, 3, 'Kitaplarımız', 'kitaplarimiz', NULL, NULL, NULL, 'tr', 44, 1, '2023-05-29 13:40:03', '2023-05-29 13:40:03'),
+(45, 3, 'ISBN Alımı', 'isbn-alimi', NULL, NULL, NULL, 'tr', 45, 1, '2023-05-29 13:40:11', '2023-05-29 13:40:11'),
+(46, 3, 'Bandrol Alımı', 'bandrol-alimi', NULL, NULL, NULL, 'tr', 46, 1, '2023-05-29 13:40:20', '2023-05-29 13:40:20'),
+(47, 3, 'Yayın Süreci', 'yayin-sureci', NULL, NULL, NULL, 'tr', 47, 1, '2023-05-29 13:40:27', '2023-05-29 13:40:27'),
+(48, 3, 'Yayınevi', 'yayinevi', NULL, NULL, NULL, 'tr', 48, 1, '2023-05-29 13:40:34', '2023-05-29 13:40:34'),
+(49, 3, 'Matbaa Sertifika', 'matbaa-sertifika', NULL, NULL, NULL, 'tr', 49, 1, '2023-05-29 13:40:44', '2023-05-29 13:40:44'),
+(50, 3, 'Neden Biz?', 'neden-biz', NULL, NULL, NULL, 'tr', 50, 1, '2023-05-29 13:41:02', '2023-05-29 13:41:02'),
+(51, 4, 'Dış Mekan', 'dis-mekan', NULL, NULL, NULL, 'tr', 51, 1, '2023-05-29 13:41:26', '2023-05-29 13:42:51'),
+(52, 4, 'İç Mekan', 'ic-mekan', NULL, NULL, NULL, 'tr', 52, 1, '2023-05-29 13:43:02', '2023-05-29 13:43:02'),
+(53, 4, 'Reflektif Branda', 'reflektif-branda', NULL, NULL, NULL, 'tr', 53, 1, '2023-05-29 13:43:13', '2023-05-29 13:43:13'),
+(54, 4, 'Sert Zemin', 'sert-zemin', NULL, NULL, NULL, 'tr', 54, 1, '2023-05-29 13:43:22', '2023-05-29 13:43:22'),
+(55, 4, 'UV Baskı', 'uv-baski', NULL, NULL, NULL, 'tr', 55, 1, '2023-05-29 13:43:32', '2023-05-29 13:43:32'),
+(56, 4, 'Yelken Bayrak', 'yelken-bayrak', NULL, NULL, NULL, 'tr', 56, 1, '2023-05-29 13:43:41', '2023-05-29 13:43:41'),
+(57, 4, 'Özel Sipariş', 'ozel-siparis', NULL, NULL, NULL, 'tr', 57, 1, '2023-05-29 13:43:52', '2023-05-29 13:43:52'),
+(58, 5, 'Serigrafi Atölyesi', 'serigrafi-atolyesi', NULL, NULL, NULL, 'tr', 58, 1, '2023-05-29 13:44:03', '2023-05-29 13:44:03'),
+(59, 6, 'Ajanda', 'ajanda', NULL, NULL, NULL, 'tr', 59, 1, '2023-05-29 13:44:12', '2023-05-29 13:44:12'),
+(60, 6, 'Kalem', 'kalem', NULL, NULL, NULL, 'tr', 60, 1, '2023-05-29 13:44:17', '2023-05-29 13:44:17'),
+(61, 6, 'Anahtarlık', 'anahtarlik', NULL, NULL, NULL, 'tr', 61, 1, '2023-05-29 13:44:26', '2023-05-29 13:44:26'),
+(62, 6, 'Plaket', 'plaket', NULL, NULL, NULL, 'tr', 62, 1, '2023-05-29 13:44:35', '2023-05-29 13:44:35'),
+(63, 6, 'Tekstil Ürünleri', 'tekstil-urunleri', NULL, NULL, NULL, 'tr', 63, 1, '2023-05-29 13:46:30', '2023-05-29 13:46:30'),
+(64, 6, 'Diğer Ürünler', 'diger-urunler', NULL, NULL, NULL, 'tr', 64, 1, '2023-05-29 13:46:39', '2023-05-29 13:46:39'),
+(65, 7, 'Karton Çanta', 'karton-canta', NULL, NULL, NULL, 'tr', 65, 1, '2023-05-29 13:46:51', '2023-05-29 13:46:51'),
+(66, 7, 'Poşet Çanta', 'poset-canta', NULL, NULL, NULL, 'tr', 66, 1, '2023-05-29 13:46:59', '2023-05-29 13:46:59'),
+(67, 7, 'Bez Çanta', 'bez-canta', NULL, NULL, NULL, 'tr', 67, 1, '2023-05-29 13:47:07', '2023-05-29 13:47:07'),
+(68, 7, 'Baskılı Kutu', 'baskili-kutu', NULL, NULL, NULL, 'tr', 68, 1, '2023-05-29 13:47:18', '2023-05-29 13:47:18'),
+(69, 7, 'Etiket', 'etiket', NULL, NULL, NULL, 'tr', 69, 1, '2023-05-29 13:47:27', '2023-05-29 13:47:27'),
+(70, 7, 'Baskısız Ambalaj', 'baskisiz-ambalaj', NULL, NULL, NULL, 'tr', 70, 1, '2023-05-29 13:47:48', '2023-05-29 13:47:48'),
+(71, 7, 'Diğer Ürünler', 'diger-urunler', NULL, NULL, NULL, 'tr', 71, 1, '2023-05-29 13:47:59', '2023-05-29 13:47:59');
 
 -- --------------------------------------------------------
 
@@ -1038,7 +1135,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `company_name`, `slogan`, `address`, `address_title`, `map`, `logo`, `mobile_logo`, `favicon`, `mobile_logo_2`, `blog_logo`, `about_logo`, `gallery_logo`, `contact_logo`, `service_logo`, `service_detail_logo`, `category_logo`, `catalog`, `sector_logo`, `phone`, `fax`, `whatsapp`, `email`, `facebook`, `twitter`, `instagram`, `linkedin`, `youtube`, `medium`, `pinterest`, `meta_description`, `analytics`, `metrica`, `rank`, `createdAt`, `updatedAt`, `isActive`, `lang`, `crawler_email`, `crawler_password`) VALUES
-(1, 'Songül Kiremitçi Beauty', 'Songül Kiremitçi Beauty', '[\"At\\u0131fbey, 5\\/3. Sk. No:1 Kat:4 D:405, 35410 Gaziemir\\/\\u0130zmir\"]', '[\"\\u0130zmir Gaziemir Salonumuz\"]', '[\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d232.64422548581732!2d27.13617784889016!3d38.324091140143075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfcfdad87199%3A0xbe7695eaceb8f937!2zQXTEsWZiZXksIDUvMy4gU2suIE5vOjEsIDM1NDEwIEdhemllbWlyL8Swem1pcg!5e0!3m2!1sen!2str!4v1683528983494!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\"]', '4534c140a4c4b4c23f7b3954263ce535.webp', 'd47d138ed81c0184efa49d293b11940b.webp', 'dceb0fd382c191ec3f09311110ed0e2d.webp', '7085b938fdddf784555ddba1f595bd75.webp', '07958960eef1c54dd4777b2d4e1822e1.webp', '5fc1ca1e13184c9d6f425d870c7f5ac6.webp', 'f7cbb30f4761c7cced93773078cfebb6.webp', '5f8bcdaf48551f8ce3f62e2d15b72087.webp', 'dd01418ac19014223a21ec84c81f68f9.webp', '5afbe8fa7c777fa932fb0ae17a082089.webp', '2214fcfd37e99728cf792119da726d5d.webp', '2ba528197b3ca10368b015fcd8e572c2.pdf', 'd6537ec6ad9c7260952e4f69c288769c.webp', '[\"+90 532 469 92 82\"]', '[\"\"]', '[\"+90 532 469 92 82\"]', 'info@songulkiremitci.com', 'https://www.facebook.com/songulkrmtc', NULL, 'https://www.instagram.com/songulkrmtc/', NULL, 'https://www.youtube.com/@songulkrmtc', NULL, NULL, 'Mutfak Yapım olarak sosyal medya, dijital pazarlama, web tasarım ve prodüksiyon alanlarında faaliyet gösteren İzmir merkezli bir reklam şirketiyiz.', '', '', 1, '2020-07-22 20:57:22', '2023-05-22 10:05:09', 1, 'tr', 'emrekilic@mutfakyapim.com', 'MutfakYapim35?');
+(1, 'Didem Davetiye', 'Didem Davetiye', '[\"Orhunlar Ge\\u00e7idi No: 6\",\"1471 Sokak No: 21\\/B\"]', '[\"Merkez\",\"DEM\\u0130RC\\u0130\\/MAN\\u0130SA \\u015eUBE\"]', '[\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d232.64422548581732!2d27.13617784889016!3d38.324091140143075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfcfdad87199%3A0xbe7695eaceb8f937!2zQXTEsWZiZXksIDUvMy4gU2suIE5vOjEsIDM1NDEwIEdhemllbWlyL8Swem1pcg!5e0!3m2!1sen!2str!4v1683528983494!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\",\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d232.64422548581732!2d27.13617784889016!3d38.324091140143075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfcfdad87199%3A0xbe7695eaceb8f937!2zQXTEsWZiZXksIDUvMy4gU2suIE5vOjEsIDM1NDEwIEdhemllbWlyL8Swem1pcg!5e0!3m2!1sen!2str!4v1683528983494!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\"]', '42bcf0cd7887f66f9494fd9e7868b1ed.webp', '211bb78e8af6e6a37dd007606fed4d99.webp', '0c258b884b097c30c70cf0241c7abe2b.webp', 'bfefa1f8dbadf8e21884553b885be03c.webp', '07958960eef1c54dd4777b2d4e1822e1.webp', '5fc1ca1e13184c9d6f425d870c7f5ac6.webp', 'f7cbb30f4761c7cced93773078cfebb6.webp', '5f8bcdaf48551f8ce3f62e2d15b72087.webp', 'dd01418ac19014223a21ec84c81f68f9.webp', '5afbe8fa7c777fa932fb0ae17a082089.webp', '2214fcfd37e99728cf792119da726d5d.webp', '2ba528197b3ca10368b015fcd8e572c2.pdf', 'd6537ec6ad9c7260952e4f69c288769c.webp', '[\"+90 236 462 12 50\",\"+90 232 463 44 69\"]', '[\"\",\"\"]', '[\"+90 236 462 12 50\",\"\"]', 'info@didemdavetiye.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Mutfak Yapım olarak sosyal medya, dijital pazarlama, web tasarım ve prodüksiyon alanlarında faaliyet gösteren İzmir merkezli bir reklam şirketiyiz.', '', '', 1, '2020-07-22 20:57:22', '2023-05-29 08:18:19', 1, 'tr', 'emrekilic@mutfakyapim.com', 'MutfakYapim35?');
 
 -- --------------------------------------------------------
 
@@ -1059,7 +1156,8 @@ CREATE TABLE `slides` (
   `video_url` longtext DEFAULT NULL,
   `video_caption` longtext DEFAULT NULL,
   `page_id` int(11) DEFAULT NULL,
-  `collection_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `product_category_id` int(11) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
   `service_id` int(11) DEFAULT NULL,
   `sector_id` int(11) DEFAULT NULL,
@@ -1075,12 +1173,12 @@ CREATE TABLE `slides` (
 -- Dumping data for table `slides`
 --
 
-INSERT INTO `slides` (`id`, `title`, `description`, `img_url`, `mobile_url`, `allowButton`, `button_url`, `target`, `button_caption`, `video_url`, `video_caption`, `page_id`, `collection_id`, `product_id`, `service_id`, `sector_id`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `sharedAt`) VALUES
-(1, NULL, '', '68f49777daeaaa9a392c32e5209f2424.webp', NULL, 0, '#', '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 1, 1, '2023-03-24 08:04:07', '2023-05-08 13:46:04', '2023-03-24 08:03:55'),
-(2, NULL, '', '616bb2bf2b280a1dba6d8b39342c9089.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 2, 1, '2023-03-24 08:04:19', '2023-05-08 13:45:56', '2023-03-24 08:04:10'),
-(3, NULL, '', 'df0a1040949b566e6ecabecefae69e0a.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 3, 1, '2023-03-24 08:04:32', '2023-05-08 13:45:57', '2023-03-24 08:04:22'),
-(4, NULL, '', '400a6d6f112ad56f016986b20e50dbca.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 4, 1, '2023-03-24 08:05:26', '2023-05-08 13:45:58', '2023-03-24 08:05:16'),
-(5, NULL, '', '3ef88036bc8375c86d2daf25250b393c.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 5, 1, '2023-03-24 08:05:38', '2023-05-08 13:46:00', '2023-03-24 08:05:28');
+INSERT INTO `slides` (`id`, `title`, `description`, `img_url`, `mobile_url`, `allowButton`, `button_url`, `target`, `button_caption`, `video_url`, `video_caption`, `page_id`, `category_id`, `product_category_id`, `product_id`, `service_id`, `sector_id`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `sharedAt`) VALUES
+(1, NULL, '', '68f49777daeaaa9a392c32e5209f2424.webp', NULL, 0, '#', '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 1, 1, '2023-03-24 08:04:07', '2023-05-08 13:46:04', '2023-03-24 08:03:55'),
+(2, NULL, '', '616bb2bf2b280a1dba6d8b39342c9089.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 2, 1, '2023-03-24 08:04:19', '2023-05-08 13:45:56', '2023-03-24 08:04:10'),
+(3, NULL, '', 'df0a1040949b566e6ecabecefae69e0a.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 3, 1, '2023-03-24 08:04:32', '2023-05-08 13:45:57', '2023-03-24 08:04:22'),
+(4, NULL, '', '400a6d6f112ad56f016986b20e50dbca.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 4, 1, '2023-03-24 08:05:26', '2023-05-08 13:45:58', '2023-03-24 08:05:16'),
+(5, NULL, '', '3ef88036bc8375c86d2daf25250b393c.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 5, 1, '2023-03-24 08:05:38', '2023-05-08 13:46:00', '2023-03-24 08:05:28');
 
 -- --------------------------------------------------------
 
@@ -1138,7 +1236,7 @@ CREATE TABLE `user_role` (
 --
 
 INSERT INTO `user_role` (`id`, `title`, `permissions`, `isActive`, `isCover`, `rank`, `createdAt`, `updatedAt`) VALUES
-(1, 'Admin', '{\"blogs\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"blog_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"dashboard\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"emailsettings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"galleries\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"menus\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"pages\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"services\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"service_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"settings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"slides\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"userop\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"users\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"user_role\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"}}', 1, 1, 1, '2020-07-22 20:58:34', '2023-05-08 13:06:36');
+(1, 'Admin', '{\"blogs\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"blog_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"dashboard\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"emailsettings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"galleries\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"menus\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"pages\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"products\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"product_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"services\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"service_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"settings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"slides\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"userop\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"users\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"user_role\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"}}', 1, 1, 1, '2020-07-22 20:58:34', '2023-05-29 11:34:30');
 
 -- --------------------------------------------------------
 
@@ -1294,6 +1392,12 @@ ALTER TABLE `pages`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `products_w_categories`
+--
+ALTER TABLE `products_w_categories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1481,10 +1585,16 @@ ALTER TABLE `products`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT for table `products_w_categories`
+--
+ALTER TABLE `products_w_categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `product_categories`
 --
 ALTER TABLE `product_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `product_images`

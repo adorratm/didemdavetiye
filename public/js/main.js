@@ -98,8 +98,8 @@
 			dots: false,
 			fade: true,
 			arrows: true,
-			prevArrow: '<button type="button" class="slick-prev"><i class="far fa-angle-left"></i></button>',
-			nextArrow: '<button type="button" class="slick-next"><i class="far fa-angle-right"></i></button>',
+			prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-chevron-left"></i></button>',
+			nextArrow: '<button type="button" class="slick-next"><i class="fa fa-chevron-right"></i></button>',
 			responsive: [
 				{ breakpoint: 1200, settings: { dots: false, arrows: false } }
 			]

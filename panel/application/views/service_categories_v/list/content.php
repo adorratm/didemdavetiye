@@ -4,7 +4,7 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <h4 class="mb-3">
                 Hizmet Kategorileri
-                <a href="javascript:void(0)" data-url="<?= base_url("service_categories/getCategories"); ?>" class="btn btn-sm btn-outline-primary rounded-0 btn-sm float-right syncServiceCategoryBtn"> <i class="fa fa-plus"></i> Hizmet Kategorisi Ekle</a>
+                <a href="javascript:void(0)" data-url="<?= base_url("service_categories/new_form") ?>" class="btn btn-sm btn-outline-primary rounded-0 btn-sm float-right createServiceCategoryBtn"> <i class="fa fa-plus"></i> Hizmet Kategorisi Ekle</a>
             </h4>
         </div>
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -77,6 +77,32 @@
             e.stopImmediatePropagation();
             let url = $(this).data("url");
             let formData = new FormData(document.getElementById("updateServiceCategory"));
+            createAjax(url, formData, function() {
+                closeModal("#serviceCategoryModal");
+                $("#serviceCategoryModal").iziModal("setFullscreen", false);
+                reloadTable("serviceCategoryTable");
+            });
+        });
+        $(document).on("click", ".createServiceCategoryBtn", function(e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            $('#serviceCategoryModal').iziModal('destroy');
+            let url = $(this).data("url");
+            createModal("#serviceCategoryModal", "Hizmet Kategorisi Ekle", "Hizmet Kategorisi Ekle", 600, true, "20px", 0, "#e20e17", "#fff", 1040, function() {
+                $.post(url, {}, function(response) {
+                    $("#serviceCategoryModal .iziModal-content").html(response);
+                    TinyMCEInit();
+                    flatPickrInit();
+                });
+            });
+            openModal("#serviceCategoryModal");
+            $("#serviceCategoryModal").iziModal("setFullscreen", false);
+        });
+        $(document).on("click", ".btnSave", function(e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            let url = $(this).data("url");
+            let formData = new FormData(document.getElementById("createServiceCategory"));
             createAjax(url, formData, function() {
                 closeModal("#serviceCategoryModal");
                 $("#serviceCategoryModal").iziModal("setFullscreen", false);

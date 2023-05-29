@@ -868,7 +868,7 @@
     }
 
     .header-two .mean-container a.meanmenu-reveal {
-        margin-top: -56px;
+        margin-top: -60px;
     }
 
     .slider-active .slick-track::before {
@@ -880,7 +880,7 @@
     }
 
     .mean-container a.meanmenu-reveal {
-        margin-top: -46px;
+        margin-top: -60px;
         color: #000;
         border: 1px solid #000;
     }
@@ -974,10 +974,6 @@
 
     .container-p {
         padding: 0 30px;
-    }
-
-    .slider-bg {
-        min-height: 700px;
     }
 
     .section-t h2 {
@@ -1218,7 +1214,7 @@
 
     /* mobile menu*/
     .mean-container a.meanmenu-reveal {
-        margin-top: -47px;
+        margin-top: -60px;
     }
 
     .header-three .mean-container a.meanmenu-reveal {
@@ -1275,7 +1271,7 @@
     .mean-container .mean-nav ul li a.mean-expand {
         text-align: right;
         top: 0;
-        width: 100%;
+        width: max-content;
         z-index: 2;
         padding: 9px 12px;
     }

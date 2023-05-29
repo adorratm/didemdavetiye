@@ -88,9 +88,9 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="form-group">
-                            <label>Sektör Linki</label>
+                            <label>Hizmet Linki</label>
                             <select class="form-control form-control-sm rounded-0 tagsInput" name="service_id" required>
-                                <option value="">Sektör Seçiniz.</option>
+                                <option value="">Hizmet Seçiniz.</option>
                                 <?php if (!empty($services)) : ?>
                                     <?php foreach ($services as $service) : ?>
                                         <option value="<?= $service->id; ?>"><?= $service->title; ?></option>
@@ -99,11 +99,11 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-none">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="form-group">
-                            <label>Kategori Linki</label>
-                            <select disabled class="form-control form-control-sm rounded-0 tagsInput" name="category_id" required>
-                                <option value="">Sayfa Seçiniz.</option>
+                            <label>Hizmet Kategorisi Linki</label>
+                            <select class="form-control form-control-sm rounded-0 tagsInput" name="category_id" required>
+                                <option value="">Hizmet Kategorisi Seçiniz.</option>
                                 <?php if (!empty($categories)) : ?>
                                     <?php foreach ($categories as $category) : ?>
                                         <option value="<?= $category->id; ?>">
@@ -114,14 +114,27 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-none">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="form-group">
-                            <label>Hizmet Linki</label>
-                            <select disabled class="form-control form-control-sm rounded-0 tagsInput" name="service_id" required>
-                                <option value="">Hizmet Seçiniz.</option>
-                                <?php if (!empty($services)) : ?>
-                                    <?php foreach ($services as $service) : ?>
-                                        <option value="<?= $service->id; ?>"><?= $service->title; ?></option>
+                            <label>Ürün Linki</label>
+                            <select class="form-control form-control-sm rounded-0 tagsInput" name="product_id" required>
+                                <option value="">Ürün Seçiniz.</option>
+                                <?php if (!empty($products)) : ?>
+                                    <?php foreach ($products as $product) : ?>
+                                        <option value="<?= $product->id; ?>"><?= $product->title; ?></option>
+                                    <?php endforeach ?>
+                                <?php endif; ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="form-group">
+                            <label>Ürün Kategorisi Linki</label>
+                            <select class="form-control form-control-sm rounded-0 tagsInput" name="product_category_id" required>
+                                <option value="">Ürün Kategorisi Seçiniz.</option>
+                                <?php if (!empty($product_categories)) : ?>
+                                    <?php foreach ($product_categories as $product_category) : ?>
+                                        <option value="<?= $product_category->id; ?>"><?= $product_category->title; ?></option>
                                     <?php endforeach ?>
                                 <?php endif; ?>
                             </select>
