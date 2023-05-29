@@ -79,7 +79,7 @@ class Pages extends MY_Controller
                     endif;
                 endif;
                 if (!empty($_FILES["banner_url"]["name"])) :
-                    $image = upload_picture("banner_url", "uploads/$this->viewFolder", ["width" => 1920, "height" => 400], "*");
+                    $image = upload_picture("banner_url", "uploads/$this->viewFolder", ["width" => 1920, "height" => 450], "*");
                     if ($image["success"]) :
                         $data["banner_url"] = $image["file_name"];
                     else :
@@ -134,7 +134,7 @@ class Pages extends MY_Controller
                 endif;
             endif;
             if (!empty($_FILES["banner_url"]["name"])) :
-                $image = upload_picture("banner_url", "uploads/$this->viewFolder", ["width" => 1920, "height" => 400], "*");
+                $image = upload_picture("banner_url", "uploads/$this->viewFolder", ["width" => 1920, "height" => 450], "*");
                 if ($image["success"]) :
                     $data["banner_url"] = $image["file_name"];
                     if (!empty($page->img_url)) :

@@ -1,13 +1,19 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(<?= !empty($item->banner_url) ? get_picture("pages_v", $item->banner_url)  : get_picture("settings_v", $settings->about_logo) ?>);">
-    </div>
+<section class="breadcrumb-area d-flex align-items-center" style="background-image:url(<?= !empty($item->banner_url) ? get_picture("pages_v", $item->banner_url)  : get_picture("settings_v", $settings->about_logo) ?>)">
     <div class="container">
-        <div class="page-header__inner">
-            <h2><?= $page_title ?></h2>
+        <div class="row align-items-center">
+            <div class="col-xl-12 col-lg-12">
+                <div class="breadcrumb-wrap text-left">
+                    <div class="breadcrumb-title">
+                        <h2><?= $page_title ?></h2>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+
 <!-- BEGIN: About Section -->
 <section class="welcome-one">
     <?php if ($item->type === "ABOUT" || $item->type === "CONTENT") : ?>
