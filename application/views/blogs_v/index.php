@@ -1,66 +1,59 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(<?= get_picture("settings_v", $settings->blog_logo) ?>);">
-    </div>
+<section class="breadcrumb-area d-flex align-items-center" style="background-image:url(<?= get_picture("settings_v", $settings->blog_logo) ?>)">
     <div class="container">
-        <div class="page-header__inner">
-            <h2><?= $page_title ?></h2>
+        <div class="row align-items-center">
+            <div class="col-xl-12 col-lg-12">
+                <div class="breadcrumb-wrap text-center">
+                    <div class="breadcrumb-title">
+                        <h2 class="mb-0"><?= $page_title ?></h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="services-one">
+<!-- inner-blog -->
+<section class="inner-blog pt-120 pb-120">
     <div class="container">
-        <div class="section-title text-center">
-            <span class="section-title__tagline"><?= $settings->company_name ?></span>
-            <h2 class="section-title__title"><?= $page_title ?></h2>
-        </div>
-        <div class="row align-items-stretch align-self-stretch align-content-stretch">
-            <?php if (!empty($blogs)) : ?>
-                <?php foreach ($blogs as $key => $value) : ?>
-                    <?php if (strtotime($value->sharedAt) <= strtotime("now")) : ?>
-                        <!--Services One Single Start-->
-                        <div class="col-xl-4 col-lg-4 wow fadeInUp animated mb-4" data-wow-delay="100ms" style="visibility: visible; animation-delay: 100ms; animation-name: fadeInUp;">
-                            <div class="services-one__single h-100">
-                                <div class="services-one__single-inner">
-                                    <div class="services-one__shape-1">
-                                        <img loading="lazy" class="lazyload img-fluid" data-src="<?= asset_url("public/images/shapes/services-one-shape-1.webp") ?>" alt="<?= $value->title ?>">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <?php if (!empty($blogs)) : ?>
+                    <?php foreach ($blogs as $key => $value) : ?>
+                        <?php if (strtotime($value->sharedAt) <= strtotime("now")) : ?>
+                            <div class="bsingle__post mb-50">
+                                <div class="bsingle__post-thumb">
+                                    <img width="1000" height="1000" data-src="<?= get_picture("blogs_v", $value->img_url) ?>" class="img-fluid lazyload" alt="<?= $value->title ?>" title="<?= $value->title ?>" />
+                                </div>
+                                <div class="bsingle__content">
+                                    <div class="meta-info">
+                                        <ul>
+                                            <?php foreach ($categories as $k => $v) : ?>
+                                                <?php if ($v->id == $value->category_id) : ?>
+                                                    <li><a rel="dofollow" href="<?= base_url(lang("routes_blog") . "/{$v->seo_url}") ?>" title="<?= $v->title ?>"><i class="fa fa-folder-open"></i> <?= $v->title ?></a></li>
+                                                <?php endif ?>
+                                            <?php endforeach ?>
+                                        </ul>
                                     </div>
-                                    <div class="services-one__shape-2">
-                                        <img loading="lazy" class="lazyload img-fluid" data-src="<?= asset_url("public/images/shapes/services-one-shape-2.webp") ?>" alt="<?= $value->title ?>">
-                                    </div>
-                                    <a href="<?= base_url(lang("routes_blog") . "/" . lang("routes_blog_detail") . "/" . $value->seo_url) ?>" rel="dofollow" title="<?= lang("viewBlog") ?>">
-                                        <div class="services-one__img-box">
-                                            <div class="services-one__img">
-                                                <img width="1000" height="1000" data-src="<?= get_picture("blogs_v", $value->img_url) ?>" class="img-fluid lazyload" alt="<?= $value->title ?>" title="<?= $value->title ?>" />
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <h3 class="services-one__title"><a href="<?= base_url(lang("routes_blog") . "/" . lang("routes_blog_detail") . "/" . $value->seo_url) ?>" rel="dofollow" title="<?= lang("viewService") ?>"><?= $value->title ?></a></h3>
-                                    <p class="services-one__text">
-                                        <?php foreach ($categories as $k => $v) : ?>
-                                            <?php if ($v->id == $value->category_id) : ?>
-                                                <a rel="dofollow" href="<?= base_url(lang("routes_blog") . "/{$v->seo_url}") ?>" title="<?= $v->title ?>"><?= $v->title ?></a>
-                                            <?php endif ?>
-                                        <?php endforeach ?>
-                                    </p>
-                                    <div class="services-one__btn-box">
-                                        <a class="services-one__btn" href="<?= base_url(lang("routes_blog") . "/" . lang("routes_blog_detail") . "/{$value->seo_url}") ?>" title="<?= $value->title ?>"><?= lang("viewBlog") ?> <i class="fa fa-arrow-right"></i></a>
+                                    <h2><a href="<?= base_url(lang("routes_blog") . "/" . lang("routes_blog_detail") . "/" . $value->seo_url) ?>" rel="dofollow" title="<?= lang("viewService") ?>"><?= $value->title ?></a></h2>
+                                    <p><?= nl2br(strip_tags(mb_word_wrap($value->content, 475, "..."))) ?></p>
+                                    <div class="blog__btn">
+                                        <a class="btn" href="<?= base_url(lang("routes_blog") . "/" . lang("routes_blog_detail") . "/{$value->seo_url}") ?>" title="<?= $value->title ?>"><?= lang("viewBlog") ?> <i class="fa fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
+                        <?php endif ?>
+                    <?php endforeach ?>
+                    <?php if (!empty($links)) : ?>
+                        <div class="pagination-wrap mb-50">
+                            <nav>
+                                <?= $links ?>
+                            </nav>
                         </div>
-                        <!--Services One Single End-->
                     <?php endif ?>
-                <?php endforeach ?>
-                <?php if (!empty($links)) : ?>
-                    <div class="col-12 text-center">
-                        <div class="blog-page__pagination">
-                            <?= @$links ?>
-                        </div>
-                    </div>
                 <?php endif ?>
-            <?php endif ?>
+            </div>
         </div>
     </div>
 </section>
+<!-- inner-blog-end -->

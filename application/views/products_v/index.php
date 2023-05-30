@@ -1,10 +1,15 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed'); ?>
-<section class="page-header">
-    <div class="page-header__bg" style="background-image: url(<?= !empty($products_category) && !empty($products_category->img_url) ? get_picture("product_categories_v", $products_category->banner_url) : get_picture("settings_v", $settings->product_logo) ?>);">
-    </div>
+<section class="breadcrumb-area d-flex align-items-center" style="background-image:url(<?= !empty($products_category) && !empty($products_category->img_url) ? get_picture("product_categories_v", $products_category->banner_url) : get_picture("settings_v", $settings->product_logo) ?>)">
     <div class="container">
-        <div class="page-header__inner">
-            <h2><?= $page_title ?></h2>
+        <div class="row align-items-center">
+            <div class="col-xl-12 col-lg-12">
+                <div class="breadcrumb-wrap text-center">
+                    <div class="breadcrumb-title">
+                        <h2 class="mb-0"><?= $page_title ?></h2>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

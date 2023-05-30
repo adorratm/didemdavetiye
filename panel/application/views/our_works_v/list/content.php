@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <h4 class="mb-3">
-                Markalarımız
+                Referanslarımız
                 <a href="javascript:void(0)" data-url="<?= base_url("our_works/new_form"); ?>" class="btn btn-sm btn-outline-primary rounded-0 float-right createOurWorksBtn"> <i class="fa fa-plus"></i> Yeni Ekle</a>
             </h4>
         </div><!-- END column -->
@@ -17,7 +17,7 @@
                         <button class="btn btn-sm btn-outline-danger rounded-0 " onclick="clearFilter('filter_form','ourWorksTable')" id="clear_button" data-toggle="tooltip" data-placement="top" data-title="Filtreyi Temizle" data-original-title="" title=""><i class="fa fa-eraser"></i></button>
                     </label>
                     <label for="search_button" class="mx-1">
-                        <button class="btn btn-sm btn-outline-success rounded-0 " onclick="reloadTable('ourWorksTable')" id="search_button" data-toggle="tooltip" data-placement="top" data-title="Markalarımızda Ara"><i class="fa fa-search"></i></button>
+                        <button class="btn btn-sm btn-outline-success rounded-0 " onclick="reloadTable('ourWorksTable')" id="search_button" data-toggle="tooltip" data-placement="top" data-title="Referanslarımızda Ara"><i class="fa fa-search"></i></button>
                 </div>
             </form>
 
@@ -63,7 +63,7 @@
 			e.stopImmediatePropagation();
 			let url = $(this).data("url");
 			$('#ourWorksModal').iziModal('destroy');
-			createModal("#ourWorksModal", "Yeni Marka Ekle", "Yeni Marka Ekle", 600, true, "20px", 0, "#e20e17", "#fff", 1040, function() {
+			createModal("#ourWorksModal", "Yeni Referans Ekle", "Yeni Referans Ekle", 600, true, "20px", 0, "#e20e17", "#fff", 1040, function() {
 				$.post(url, {}, function(response) {
 					$("#ourWorksModal .iziModal-content").html(response);
 					TinyMCEInit();
@@ -95,7 +95,7 @@
 			e.stopImmediatePropagation();
 			$('#ourWorksModal').iziModal('destroy');
 			let url = $(this).data("url");
-			createModal("#ourWorksModal", "Marka Düzenle", "Marka Düzenle", 600, true, "20px", 0, "#e20e17", "#fff", 1040, function() {
+			createModal("#ourWorksModal", "Referans Düzenle", "Referans Düzenle", 600, true, "20px", 0, "#e20e17", "#fff", 1040, function() {
 				$.post(url, {}, function(response) {
 					$("#ourWorksModal .iziModal-content").html(response);
 					TinyMCEInit();

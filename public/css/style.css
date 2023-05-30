@@ -680,7 +680,7 @@ label {
     top: 0;
     width: 100%;
     box-shadow: 0 0 60px 0 rgba(0, 0, 0, .07);
-    z-index: 9999 !important;
+    z-index: 3 !important;
     background: #fff;
     -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
     animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
@@ -1220,7 +1220,7 @@ label {
 .breadcrumb-area {
     background-size: cover;
     position: relative;
-    min-height: 450px;
+    min-height: 200px;
     background-repeat: no-repeat;
     background-color: #000;
 }

@@ -67,7 +67,7 @@ class Our_works extends MY_Controller
         $data = rClean($this->input->post());
         if (checkEmpty($data)["error"] && checkEmpty($data)["key"] != "content") :
             $key = checkEmpty($data)["key"];
-            echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Markalarımız Kaydı Yapılırken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
+            echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Referanslarımız Kaydı Yapılırken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
         else :
             $getRank = $this->our_works_model->rowCount();
             if (!empty($_FILES["img_url"]["name"])) :
@@ -75,7 +75,7 @@ class Our_works extends MY_Controller
                 if ($image["success"]) :
                     $data["img_url"] = $image["file_name"];
                 else :
-                    echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Markalarımız Kaydı Yapılırken Hata Oluştu. Markalarımız Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
+                    echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Referanslarımız Kaydı Yapılırken Hata Oluştu. Referanslarımız Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
                     die();
                 endif;
             endif;
@@ -84,9 +84,9 @@ class Our_works extends MY_Controller
             $data["rank"] = $getRank + 1;
             $insert = $this->our_works_model->add($data);
             if ($insert) :
-                echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Markalarımız Başarıyla Eklendi."]);
+                echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Referanslarımız Başarıyla Eklendi."]);
             else :
-                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Markalarımız Eklenirken Hata Oluştu, Lütfen Tekrar Deneyin."]);
+                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Referanslarımız Eklenirken Hata Oluştu, Lütfen Tekrar Deneyin."]);
             endif;
         endif;
     }
@@ -104,7 +104,7 @@ class Our_works extends MY_Controller
         $data = rClean($this->input->post());
         if (checkEmpty($data)["error"] && checkEmpty($data)["key"] != "content") :
             $key = checkEmpty($data)["key"];
-            echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Markalarımız Güncelleştirilirken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
+            echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Referanslarımız Güncelleştirilirken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
         else :
             $our_works = $this->our_works_model->get(["id" => $id]);
             $data["img_url"] = $our_works->img_url;
@@ -118,16 +118,16 @@ class Our_works extends MY_Controller
                         endif;
                     endif;
                 else :
-                    echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Markalarımız Güncelleştirilirken Hata Oluştu. Markalarımız Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
+                    echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Referanslarımız Güncelleştirilirken Hata Oluştu. Referanslarımız Görseli Seçtiğinizden Emin Olup Tekrar Deneyin."]);
                     die();
                 endif;
             endif;
             $data["content"] = $_POST["content"];
             $update = $this->our_works_model->update(["id" => $id], $data);
             if ($update) :
-                echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Markalarımız Başarıyla Güncelleştirildi."]);
+                echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Referanslarımız Başarıyla Güncelleştirildi."]);
             else :
-                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Markalarımız Güncelleştirilirken Hata Oluştu, Lütfen Tekrar Deneyin."]);
+                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Referanslarımız Güncelleştirilirken Hata Oluştu, Lütfen Tekrar Deneyin."]);
             endif;
         endif;
     }
@@ -142,9 +142,9 @@ class Our_works extends MY_Controller
                         unlink(FCPATH . "uploads/{$this->viewFolder}/{$our_works->img_url}");
                     endif;
                 endif;
-                echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Markalarımız Başarıyla Silindi."]);
+                echo json_encode(["success" => true, "title" => "Başarılı!", "message" => "Referanslarımız Başarıyla Silindi."]);
             else :
-                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Markalarımız Silinirken Hata Oluştu, Lütfen Tekrar Deneyin."]);
+                echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Referanslarımız Silinirken Hata Oluştu, Lütfen Tekrar Deneyin."]);
             endif;
         endif;
     }

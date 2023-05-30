@@ -7,14 +7,14 @@
         <div class="animations-02"><img loading="lazy" class="lazyload img-fluid" data-src="<?= asset_url("public/images/bg/an-img-02.webp") ?>" alt="<?= $aboutPage->title ?>"></div>
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="col-lg-8 col-md-12 col-sm-12">
                     <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
-                        <img width="1000" height="1000" loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("pages_v", $aboutPage->img_url) ?>" title="<?= $aboutPage->title ?>" alt="<?= $aboutPage->title ?>">
+                        <img width="1920" height="400" loading="lazy" class="img-fluid lazyload" data-src="<?= get_picture("pages_v", $aboutPage->img_url) ?>" title="<?= $aboutPage->title ?>" alt="<?= $aboutPage->title ?>">
                     </div>
 
                 </div>
 
-                <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="col-lg-8 col-md-12 col-sm-12 text-center">
                     <div class="about-content s-about-content  wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s">
                         <div class="about-title second-title pb-25">
                             <h5><?= $settings->company_name ?></h5>
