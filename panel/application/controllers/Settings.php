@@ -91,7 +91,7 @@ class Settings extends MY_Controller
             $sector_logo = upload_picture("sector_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $about_logo = upload_picture("about_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $gallery_logo = upload_picture("gallery_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
-            $service_logo = upload_picture("service_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
+            $product_logo = upload_picture("product_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $service_detail_logo = upload_picture("service_detail_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $gallery_logo = upload_picture("gallery_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $category_logo = upload_picture("category_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
@@ -127,8 +127,8 @@ class Settings extends MY_Controller
             if ($gallery_logo["success"]) :
                 $data["gallery_logo"] = $gallery_logo["file_name"];
             endif;
-            if ($service_logo["success"]) :
-                $data["service_logo"] = $service_logo["file_name"];
+            if ($product_logo["success"]) :
+                $data["product_logo"] = $product_logo["file_name"];
             endif;
             if ($service_detail_logo["success"]) :
                 $data["service_detail_logo"] = $service_detail_logo["file_name"];
@@ -294,12 +294,12 @@ class Settings extends MY_Controller
                         die();
                     endif;
                 endif;
-                if (!empty($_FILES["service_logo"]["name"])) :
-                    $image = upload_picture("service_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
+                if (!empty($_FILES["product_logo"]["name"])) :
+                    $image = upload_picture("product_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
                     if ($image["success"]) :
-                        $data["service_logo"] = $image["file_name"];
+                        $data["product_logo"] = $image["file_name"];
                     else :
-                        echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Ayar Güncelleştirilirken Hata Oluştu. Hizmet Logosu Seçtiğinizden Emin Olup, Lütfen Tekrar Deneyin."]);
+                        echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Ayar Güncelleştirilirken Hata Oluştu. Ürün Logosu Seçtiğinizden Emin Olup, Lütfen Tekrar Deneyin."]);
                         die();
                     endif;
                 endif;

@@ -22,7 +22,7 @@
                 <?php foreach ($galleries as $k => $v) : ?>
                     <!--Services One Single Start-->
                     <div class="col-xl-4 col-lg-4 wow fadeInUp animated mb-4">
-                        <div class="product mb-40">
+                        <div class="product">
                             <div class="product__img">
                                 <a href="<?= base_url(lang("routes_galleries") . "/" . lang("routes_gallery") . "/" . $v->url) ?>" rel="dofollow" title="<?= lang("viewService") ?>">
                                     <img width="1000" height="1000" data-src="<?= get_picture("galleries_v", $v->img_url) ?>" class="img-fluid lazyload" alt="<?= $v->title ?>" title="<?= $v->title ?>" />

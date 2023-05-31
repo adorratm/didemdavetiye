@@ -26,7 +26,7 @@
                             <?php if (strto("lower", $extension) === "pdf") : ?>
                                 <iframe loading="lazy" data-src="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" frameborder="0" class="w-100 lazyload vh-100"></iframe>
                             <?php else : ?>
-                                <div class="product mb-40 h-100">
+                                <div class="product h-100">
                                     <div class="product__img">
                                         <img width="1000" height="1000" data-src="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $gallery->img_url) ?>" class="img-fluid lazyload" alt="<?= $value->title ?>" title="<?= $value->title ?>" />
                                     </div>
@@ -48,7 +48,7 @@
                             <?php elseif ($gallery->gallery_type == "video_urls") : ?>
                                 <?= htmlspecialchars_decode($value->url) ?>
                             <?php else : ?>
-                                <div class="product mb-40 h-100">
+                                <div class="product h-100">
                                     <div class="product__img">
                                         <a class="lightimg lightimg<?= $j ?>" rel="dofollow" data-exthumbimage="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" href="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" title="<?= $value->title ?>">
                                             <div class="services-one__img-box">

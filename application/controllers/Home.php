@@ -103,7 +103,7 @@ class Home extends MY_Controller
                 $attachments = [$_FILES["cv"]];
                 $message = "\"" . $data['full_name'] . "\" İsimli ziyaretçi iş başvurusunda bulundu. \n\n <b>Ad Soyad : </b> " . $data["full_name"] . "\n\n <b>Telefon : </b> " . $data["phone"] . "\n\n <b>E-mail : </b> " . $data["email"] . "\n\n <b>Çalışmak İstediği Departman : </b>" . $data["department"] . "\n\n <b>Mesaj : </b>" . $data["comment"];
                 $message = $this->load->view("includes/simple_mail_template", ["settings" => get_settings(), "subject" => "Yeni Bir İş Başvurusu Var! | " . $this->viewData->settings->company_name, "message" => $message, "lang" => $this->viewData->lang], true);
-                if (send_emailv2("", "Yeni Bir İş Başvurusu Var! | " . $this->viewData->settings->company_name, $message, $attachments, $this->viewData->lang,2)) :
+                if (send_emailv2("", "Yeni Bir İş Başvurusu Var! | " . $this->viewData->settings->company_name, $message, $attachments, $this->viewData->lang, 2)) :
                     echo json_encode(["success" => true, "title" => lang("successMessageTitleText"), "message" => lang("careerSuccessMessageText")]);
                     die();
                 else :
@@ -274,31 +274,31 @@ class Home extends MY_Controller
             endforeach;
         endif;
         /**
-         * Service Categories
+         * Product Categories
          */
-        $service_categories = $this->general_model->get_all("service_categories", null, "rank ASC", ["isActive" => 1, "lang" => $this->viewData->lang]);
-        if (!empty($service_categories)) :
-            foreach ($service_categories as $k => $v) :
+        $product_categories = $this->general_model->get_all("product_categories", null, "rank ASC", ["isActive" => 1, "lang" => $this->viewData->lang]);
+        if (!empty($product_categories)) :
+            foreach ($product_categories as $k => $v) :
                 if (!empty($v->seo_url)) :
-                    $this->sitemapmodel->add(base_url(lang("routes_services") . "/{$v->seo_url}"), NULL, 'always', 1);
+                    $this->sitemapmodel->add(base_url(lang("routes_products") . "/{$v->seo_url}"), NULL, 'always', 1);
                 endif;
             endforeach;
         endif;
         /**
-         * Services
+         * Products
          */
-        $wheres["s.isActive"] = 1;
-        $wheres["si.isCover"] = 1;
-        $wheres["s.lang"] = $this->viewData->lang;
-        $joins = ["service_categories sc" => ["s.category_id = sc.id", "left"], "service_images si" => ["si.service_id = s.id", "left"]];
-        $select = "s.id,s.title,s.seo_url,si.url img_url";
+        $wheres["p.isActive"] = 1;
+        $wheres["pi.isCover"] = 1;
+        $wheres["p.lang"] = $this->viewData->lang;
+        $joins = ["product_images pi" => ["pi.product_id = p.id", "left"]];
+        $select = "p.id,p.title,p.seo_url,pi.url img_url";
         $distinct = true;
-        $groupBy = ["s.id"];
-        $services = $this->general_model->get_all("services s", $select, "s.id DESC", $wheres, [], $joins, [], [], $distinct, $groupBy);
-        if (!empty($services)) :
-            foreach ($services as $k => $v) :
+        $groupBy = ["p.id"];
+        $products = $this->general_model->get_all("products p", $select, "p.id DESC", $wheres, [], $joins, [], [], $distinct, $groupBy);
+        if (!empty($products)) :
+            foreach ($products as $k => $v) :
                 if (!empty($v->url)) :
-                    $this->sitemapmodel->add(base_url(lang("routes_services") . "/" . lang("routes_service") . "/{$v->url}"), NULL, 'always', 1);
+                    $this->sitemapmodel->add(base_url(lang("routes_products") . "/" . lang("routes_product") . "/{$v->url}"), NULL, 'always', 1);
                 endif;
             endforeach;
         endif;

@@ -28,7 +28,7 @@ $lang["(:any)/urunlerimiz"] = "product_categories/index";
 $lang["(:any)/urunlerimiz/(:num)"] = "product_categories/index/$2";
 $lang["(:any)/urunlerimiz/(:any)"] = "products/index/$2";
 $lang["(:any)/urunlerimiz/(:any)/(:num)"] = "products/index/$2/$3";
-$lang["(:any)/urunlerimiz/urun/(:any)"] = "products/service_detail/$2/$3";
+$lang["(:any)/urunlerimiz/urun/(:any)"] = "products/product_detail/$2/$3";
 
 $lang["(:any)/galeriler"] = "galleries/index";
 $lang["(:any)/galeriler/(:num)"] = "galleries/index/$2";

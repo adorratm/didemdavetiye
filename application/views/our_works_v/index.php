@@ -20,7 +20,7 @@
             <?php foreach ($our_works as $key => $value) : ?>
                 <!--Project One Single Start-->
                 <div class="col-6 col-sm-6 col-md-4 col-lg-2 mb-3">
-                    <div class="product mb-40 h-100">
+                    <div class="product h-100">
                         <div class="product__img">
                             <img data-src="<?= get_picture("our_works_v", $value->img_url) ?>" title="<?= $value->title ?>" alt="<?= $value->title ?>" class="lazyload img-fluid w-100">
                         </div>

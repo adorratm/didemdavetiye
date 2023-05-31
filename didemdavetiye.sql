@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2023 at 04:40 PM
+-- Generation Time: May 31, 2023 at 04:00 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -480,6 +480,13 @@ CREATE TABLE `images` (
   `sharedAt` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `gallery_id`, `url`, `img_url`, `title`, `description`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `sharedAt`) VALUES
+(3, 1, '7c10ba75738e2e25965da9dbb34e50af.webp', NULL, NULL, NULL, 'tr', 1, 1, '2023-05-30 11:57:00', '2023-05-30 11:57:00', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -743,7 +750,9 @@ INSERT INTO `menus` (`id`, `page_id`, `top_id`, `position`, `target`, `title`, `
 (8, 0, 0, 'FOOTER', '_self', 'Ürünlerimiz', '/urunlerimiz', 'tr', 8, 1, '2023-03-20 12:46:11', '2023-05-28 20:46:08', 0, 0),
 (9, 0, 0, 'FOOTER', '_self', 'Galeri', '/galeriler/galeri/resim-galerisi', 'tr', 9, 1, '2023-05-08 07:06:45', '2023-05-08 13:25:30', 0, 0),
 (10, 0, 0, 'FOOTER', '_self', 'Blog', '/blog', 'tr', 10, 1, '2023-05-08 07:08:02', '2023-05-08 07:08:22', 0, 0),
-(11, 0, 0, 'FOOTER', '_self', 'İletişim', '/iletisim', 'tr', 11, 1, '2022-03-05 14:31:32', '2023-05-08 07:08:16', 0, 0);
+(11, 0, 0, 'FOOTER', '_self', 'İletişim', '/iletisim', 'tr', 11, 1, '2022-03-05 14:31:32', '2023-05-08 07:08:16', 0, 0),
+(12, 2, 2, 'HEADER', '_self', 'Misyonumuz', NULL, 'tr', 12, 1, '2023-05-30 12:58:05', '2023-05-30 12:58:05', 0, 0),
+(13, 3, 2, 'HEADER', '_self', 'Vizyonumuz', NULL, 'tr', 13, 1, '2023-05-30 12:58:15', '2023-05-30 12:58:15', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -790,7 +799,9 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `url`, `title`, `content`, `img_url`, `banner_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `sharedAt`, `type`) VALUES
-(1, 'hakkimizda', 'Hakkımızda', '<p><strong>1954</strong></p>\r\n<p>1954 Yılında Namık Kemal ERDEM ve Eşi Esma ERDEM tarafından KARDEŞLER MATBAASI-GAZETECİLİK Firması Kuruldu.</p>\r\n<p>1954 Yılında KARDEŞLER MATBAASI-GAZETECİLİK’te Simav\'ın Sesi Gazetesi yayımlandı.</p>\r\n<p><strong>1957</strong></p>\r\n<p>1957 Yılında KARDEŞLER MATBAASI-GAZETECİLİK Matbaa Tesislerini Manisa’nın Demirci İlçesine Taşıdı. Demirci\'de İlk Matbaa Kurulmuş oldu.  Demirci’nin İlk Gazetesini  yayımladı.</p>\r\n<p><strong>1961</strong></p>\r\n<p>23 Nisan 1961 Tarihinde Namık Kemal ERDEM’in Vefatı nedeniyle İşi Esma ERDEM Devraldı. 6 Yaşında olan Oğlu Âli Cenap ERDEM ve 7. Yaşında olan Cengizhan ERDEM ile Matbaacılık ve Gazetecilik Mesleklerini  Devam ettirdi.</p>\r\n<p>1961 Yılından İtibaren</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK’te Sırasıyla</p>\r\n<p>Demirci Gerçek, Demirci\'nin Sesi; Hakiki Demirci\'nin Sesi, Milliyetçi Vatan, Manisa Selendi, İzmir Kemalpaşa; İzmir Torbalı, Simav Anadolu, Salihli Hamle, Demirci Hamle; Halıkent ve Gördes Bölge Gazetelerini Yayımlandı.</p>\r\n<p>Halıkent ve Gördes Gazeteleri Yayın Hayatına Hâlen Devam Ediyor.</p>\r\n<p><strong>2002</strong></p>\r\n<p>Firma Sahibi Esma ERDEM 30 Ocak 2002 Yılında Küçük oğlu Âli Cenap ERDEM’i Kaybetti.</p>\r\n<p><strong>2008</strong></p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Firma Sahibi; Sarı Basın Kartı Sahibi Esma ERDEM’e</p>\r\n<p><strong>2008</strong> Yılında Manisa Defterdarlığı Tarafından 2008 Yılında 47. Yılı Nedeniyle Teşekkür Belgesi verildi.</p>\r\n<p><strong>2013</strong> Yılında Esma ERDEM En çok Vergi Ödeyenler Listesinin 5. Sırasında Yer Aldı.</p>\r\n<p><strong>2017 </strong>Yılında Esma ERDEM “Türk Basınının Nene Hatunu” ünvanını Aldı.</p>\r\n<p><strong>2018 </strong>Yılında Esma ERDEM TRT\'nin Ömür Dediğin Programında Belgeseli Yayımlandı.</p>\r\n<p>Basın İlan Kurumu Tarafından “Duayen Gazeteciler” Programında “Türk Basınının Nene Hatunu Esma Erdem” Belgeseli Yapıldı.</p>\r\n<p>Çeşitli Kurumların Verdiği Ödüllerin Yanında Türkiye Basın Yayın Enformasyon Genel Müdürlüğü Tarafından Türkiye İkinciliği Ödülü Verildi.</p>\r\n<p><strong>2022</strong> Yılında Esma ERDEM’e “Yılın Ahisi” Ünvanı  verildi.</p>\r\n<p><strong>2022</strong> Yılı Ağustos Ayında İzmir Konak Alsancak’ta  KARDEŞLER MATBAASI-GAZETECİLİK olarak İzmir Matbaa Tesislerinin Açılışını Yaptı.</p>\r\n<p>1954 Yılından Bugüne KARDEŞLER MATBAASI-GAZETECİLİK  bünyesinde Onlarca Kişi Yetişti.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK  Hiç Aralık Vermeden 1954 Yılından Beri Çalışmalarına Devam Ederek Türk Ekonomisine Katkıda Bulunuyor.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Firma Sahibi  Esma ERDEM; Oğlu Cengizhan ERDEM ve Matbaa Öğretmenliği Mezunu Torunu Namık Kemal ERDEM İle Birlikte Üç Nesilden Beri  Matbaacılık ve Gazetecilik Mesleğini Devam Ettiriyor.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Manisa ve İzmir’deki  Basım tesislerinde yapmış olduğu; Temiz ve Kaliteli ürünleri ile Müşterilerinden aldığı destek ve güç ile \"<strong>DİDEM DAVETİYE\" </strong>Markası’nı  oluşturmuştur.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK  Manisa ve İzmir’deki Matbaa Tesisleri ile Basım Hizmetlerini Üretim Sürecine Göre Hızlı ve Kaliteli Olarak Üretmek İçin Çalışacaktır.</p>\r\n<p>1954’den Bugüne <strong>ÜRETEN BİR MATBAA</strong> olan <strong>KARDEŞLER MATBAASI-GAZETECİLİK </strong> “Sizlerin de Desteği İle Devam Edecektir.”</p>\r\n<p><strong>“DİDEM DAVETİYE”</strong></p>', '7d5d3729b89770f37ce006ebd7b0a581.webp', '806d33c6f95a654691e5cf41c31cdc10.webp', 'tr', 1, 1, '2022-02-23 06:24:54', '2023-05-29 11:27:32', '2022-02-23 06:24:26', 'SIMPLE');
+(1, 'hakkimizda', 'Hakkımızda', '<p><strong>1954</strong></p>\r\n<p>1954 Yılında Namık Kemal ERDEM ve Eşi Esma ERDEM tarafından KARDEŞLER MATBAASI-GAZETECİLİK Firması Kuruldu.</p>\r\n<p>1954 Yılında KARDEŞLER MATBAASI-GAZETECİLİK’te Simav\'ın Sesi Gazetesi yayımlandı.</p>\r\n<p><strong>1957</strong></p>\r\n<p>1957 Yılında KARDEŞLER MATBAASI-GAZETECİLİK Matbaa Tesislerini Manisa’nın Demirci İlçesine Taşıdı. Demirci\'de İlk Matbaa Kurulmuş oldu.  Demirci’nin İlk Gazetesini  yayımladı.</p>\r\n<p><strong>1961</strong></p>\r\n<p>23 Nisan 1961 Tarihinde Namık Kemal ERDEM’in Vefatı nedeniyle İşi Esma ERDEM Devraldı. 6 Yaşında olan Oğlu Âli Cenap ERDEM ve 7. Yaşında olan Cengizhan ERDEM ile Matbaacılık ve Gazetecilik Mesleklerini  Devam ettirdi.</p>\r\n<p>1961 Yılından İtibaren</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK’te Sırasıyla</p>\r\n<p>Demirci Gerçek, Demirci\'nin Sesi; Hakiki Demirci\'nin Sesi, Milliyetçi Vatan, Manisa Selendi, İzmir Kemalpaşa; İzmir Torbalı, Simav Anadolu, Salihli Hamle, Demirci Hamle; Halıkent ve Gördes Bölge Gazetelerini Yayımlandı.</p>\r\n<p>Halıkent ve Gördes Gazeteleri Yayın Hayatına Hâlen Devam Ediyor.</p>\r\n<p><strong>2002</strong></p>\r\n<p>Firma Sahibi Esma ERDEM 30 Ocak 2002 Yılında Küçük oğlu Âli Cenap ERDEM’i Kaybetti.</p>\r\n<p><strong>2008</strong></p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Firma Sahibi; Sarı Basın Kartı Sahibi Esma ERDEM’e</p>\r\n<p><strong>2008</strong> Yılında Manisa Defterdarlığı Tarafından 2008 Yılında 47. Yılı Nedeniyle Teşekkür Belgesi verildi.</p>\r\n<p><strong>2013</strong> Yılında Esma ERDEM En çok Vergi Ödeyenler Listesinin 5. Sırasında Yer Aldı.</p>\r\n<p><strong>2017 </strong>Yılında Esma ERDEM “Türk Basınının Nene Hatunu” ünvanını Aldı.</p>\r\n<p><strong>2018 </strong>Yılında Esma ERDEM TRT\'nin Ömür Dediğin Programında Belgeseli Yayımlandı.</p>\r\n<p>Basın İlan Kurumu Tarafından “Duayen Gazeteciler” Programında “Türk Basınının Nene Hatunu Esma Erdem” Belgeseli Yapıldı.</p>\r\n<p>Çeşitli Kurumların Verdiği Ödüllerin Yanında Türkiye Basın Yayın Enformasyon Genel Müdürlüğü Tarafından Türkiye İkinciliği Ödülü Verildi.</p>\r\n<p><strong>2022</strong> Yılında Esma ERDEM’e “Yılın Ahisi” Ünvanı  verildi.</p>\r\n<p><strong>2022</strong> Yılı Ağustos Ayında İzmir Konak Alsancak’ta  KARDEŞLER MATBAASI-GAZETECİLİK olarak İzmir Matbaa Tesislerinin Açılışını Yaptı.</p>\r\n<p>1954 Yılından Bugüne KARDEŞLER MATBAASI-GAZETECİLİK  bünyesinde Onlarca Kişi Yetişti.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK  Hiç Aralık Vermeden 1954 Yılından Beri Çalışmalarına Devam Ederek Türk Ekonomisine Katkıda Bulunuyor.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Firma Sahibi  Esma ERDEM; Oğlu Cengizhan ERDEM ve Matbaa Öğretmenliği Mezunu Torunu Namık Kemal ERDEM İle Birlikte Üç Nesilden Beri  Matbaacılık ve Gazetecilik Mesleğini Devam Ettiriyor.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK Manisa ve İzmir’deki  Basım tesislerinde yapmış olduğu; Temiz ve Kaliteli ürünleri ile Müşterilerinden aldığı destek ve güç ile \"<strong>DİDEM DAVETİYE\" </strong>Markası’nı  oluşturmuştur.</p>\r\n<p>KARDEŞLER MATBAASI-GAZETECİLİK  Manisa ve İzmir’deki Matbaa Tesisleri ile Basım Hizmetlerini Üretim Sürecine Göre Hızlı ve Kaliteli Olarak Üretmek İçin Çalışacaktır.</p>\r\n<p>1954’den Bugüne <strong>ÜRETEN BİR MATBAA</strong> olan <strong>KARDEŞLER MATBAASI-GAZETECİLİK </strong> “Sizlerin de Desteği İle Devam Edecektir.”</p>\r\n<p><strong>“DİDEM DAVETİYE”</strong></p>', '585b95a8113f33f0acf379f6c9f9471c.webp', '806d33c6f95a654691e5cf41c31cdc10.webp', 'tr', 1, 1, '2022-02-23 06:24:54', '2023-05-30 12:56:20', '2022-02-23 06:24:26', 'SIMPLE'),
+(2, 'misyonumuz', 'Misyonumuz', '<p><strong>1954’te</strong> Başlayan Basım ve Yayım hizmetlerimiz aralıksız olarak bugünlere ulaştı.</p>\r\n<p>Değerine hergeçen yıl tecrübe katarak ilerleyen firmamız makina yatırımlarını her zaman artırmayı hedefler.</p>\r\n<p>Uzman kadrosu\'na önem veren firmamız baskılarda <strong>kalite ve müşteri memnuniyetini hep düşünür.</strong></p>\r\n<p>Firmamız <strong>Kazanımlarını kağıda aktarmakta Değerli bir Markadır…</strong></p>', '95e94f6fc477fa85822552d84781ebd9.webp', NULL, 'tr', 2, 1, '2023-05-30 12:57:25', '2023-05-30 12:57:25', '2023-05-30 12:56:54', 'SIMPLE'),
+(3, 'vizyonumuz', 'Vizyonumuz', '<p><strong>Matbaacılık Alanında</strong> Yurtiçi ve Yurdışındaki Basım Hizmetlerimiz ile</p>\r\n<p>En Saygın Konuma Ulaşmak ve</p>\r\n<p><strong>Dünya\'yı Kağıt Üzerine Taşımak Hedefimiz dir…</strong></p>', '657432a7513f4135f49575586fdd2074.webp', NULL, 'tr', 3, 1, '2023-05-30 12:57:44', '2023-05-30 12:57:44', '2023-05-30 12:57:26', 'SIMPLE');
 
 -- --------------------------------------------------------
 
@@ -965,6 +976,13 @@ CREATE TABLE `product_images` (
   `updatedAt` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `product_images`
+--
+
+INSERT INTO `product_images` (`id`, `product_id`, `url`, `img_url`, `title`, `description`, `lang`, `rank`, `isActive`, `isCover`, `createdAt`, `updatedAt`) VALUES
+(1, 1, 'c4564ad1f14ca5975d0dadf1337982fa.webp', NULL, NULL, NULL, 'tr', 1, 1, 1, '2023-05-31 07:48:24', '2023-05-31 07:48:25');
+
 -- --------------------------------------------------------
 
 --
@@ -1102,6 +1120,8 @@ CREATE TABLE `settings` (
   `about_logo` varchar(255) DEFAULT NULL,
   `gallery_logo` varchar(255) DEFAULT NULL,
   `contact_logo` varchar(255) DEFAULT NULL,
+  `product_logo` varchar(255) DEFAULT NULL,
+  `product_detail_logo` varchar(255) DEFAULT NULL,
   `service_logo` varchar(255) DEFAULT NULL,
   `service_detail_logo` varchar(255) DEFAULT NULL,
   `category_logo` varchar(255) DEFAULT NULL,
@@ -1134,8 +1154,8 @@ CREATE TABLE `settings` (
 -- Dumping data for table `settings`
 --
 
-INSERT INTO `settings` (`id`, `company_name`, `slogan`, `address`, `address_title`, `map`, `logo`, `mobile_logo`, `favicon`, `mobile_logo_2`, `blog_logo`, `about_logo`, `gallery_logo`, `contact_logo`, `service_logo`, `service_detail_logo`, `category_logo`, `catalog`, `sector_logo`, `phone`, `fax`, `whatsapp`, `email`, `facebook`, `twitter`, `instagram`, `linkedin`, `youtube`, `medium`, `pinterest`, `meta_description`, `analytics`, `metrica`, `rank`, `createdAt`, `updatedAt`, `isActive`, `lang`, `crawler_email`, `crawler_password`) VALUES
-(1, 'Didem Davetiye', 'Didem Davetiye', '[\"Orhunlar Ge\\u00e7idi No: 6\",\"1471 Sokak No: 21\\/B\"]', '[\"Merkez\",\"DEM\\u0130RC\\u0130\\/MAN\\u0130SA \\u015eUBE\"]', '[\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d232.64422548581732!2d27.13617784889016!3d38.324091140143075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfcfdad87199%3A0xbe7695eaceb8f937!2zQXTEsWZiZXksIDUvMy4gU2suIE5vOjEsIDM1NDEwIEdhemllbWlyL8Swem1pcg!5e0!3m2!1sen!2str!4v1683528983494!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\",\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d232.64422548581732!2d27.13617784889016!3d38.324091140143075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfcfdad87199%3A0xbe7695eaceb8f937!2zQXTEsWZiZXksIDUvMy4gU2suIE5vOjEsIDM1NDEwIEdhemllbWlyL8Swem1pcg!5e0!3m2!1sen!2str!4v1683528983494!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\"]', '42bcf0cd7887f66f9494fd9e7868b1ed.webp', '211bb78e8af6e6a37dd007606fed4d99.webp', '0c258b884b097c30c70cf0241c7abe2b.webp', 'bfefa1f8dbadf8e21884553b885be03c.webp', '07958960eef1c54dd4777b2d4e1822e1.webp', '5fc1ca1e13184c9d6f425d870c7f5ac6.webp', 'f7cbb30f4761c7cced93773078cfebb6.webp', '5f8bcdaf48551f8ce3f62e2d15b72087.webp', 'dd01418ac19014223a21ec84c81f68f9.webp', '5afbe8fa7c777fa932fb0ae17a082089.webp', '2214fcfd37e99728cf792119da726d5d.webp', '2ba528197b3ca10368b015fcd8e572c2.pdf', 'd6537ec6ad9c7260952e4f69c288769c.webp', '[\"+90 236 462 12 50\",\"+90 232 463 44 69\"]', '[\"\",\"\"]', '[\"+90 236 462 12 50\",\"\"]', 'info@didemdavetiye.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Mutfak Yapım olarak sosyal medya, dijital pazarlama, web tasarım ve prodüksiyon alanlarında faaliyet gösteren İzmir merkezli bir reklam şirketiyiz.', '', '', 1, '2020-07-22 20:57:22', '2023-05-29 08:18:19', 1, 'tr', 'emrekilic@mutfakyapim.com', 'MutfakYapim35?');
+INSERT INTO `settings` (`id`, `company_name`, `slogan`, `address`, `address_title`, `map`, `logo`, `mobile_logo`, `favicon`, `mobile_logo_2`, `blog_logo`, `about_logo`, `gallery_logo`, `contact_logo`, `product_logo`, `product_detail_logo`, `service_logo`, `service_detail_logo`, `category_logo`, `catalog`, `sector_logo`, `phone`, `fax`, `whatsapp`, `email`, `facebook`, `twitter`, `instagram`, `linkedin`, `youtube`, `medium`, `pinterest`, `meta_description`, `analytics`, `metrica`, `rank`, `createdAt`, `updatedAt`, `isActive`, `lang`, `crawler_email`, `crawler_password`) VALUES
+(1, 'Didem Davetiye', 'Didem Davetiye', '[\"Orhunlar Ge\\u00e7idi No: 6\",\"1471 Sokak No: 21\\/B\"]', '[\"Merkez\",\"DEM\\u0130RC\\u0130\\/MAN\\u0130SA \\u015eUBE\"]', '[\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d232.64422548581732!2d27.13617784889016!3d38.324091140143075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfcfdad87199%3A0xbe7695eaceb8f937!2zQXTEsWZiZXksIDUvMy4gU2suIE5vOjEsIDM1NDEwIEdhemllbWlyL8Swem1pcg!5e0!3m2!1sen!2str!4v1683528983494!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\",\"&lt;iframe src=&quot;https:\\/\\/www.google.com\\/maps\\/embed?pb=!1m18!1m12!1m3!1d232.64422548581732!2d27.13617784889016!3d38.324091140143075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfcfdad87199%3A0xbe7695eaceb8f937!2zQXTEsWZiZXksIDUvMy4gU2suIE5vOjEsIDM1NDEwIEdhemllbWlyL8Swem1pcg!5e0!3m2!1sen!2str!4v1683528983494!5m2!1sen!2str&quot; width=&quot;100%&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot; referrerpolicy=&quot;no-referrer-when-downgrade&quot;&gt;&lt;\\/iframe&gt;\"]', '42bcf0cd7887f66f9494fd9e7868b1ed.webp', '211bb78e8af6e6a37dd007606fed4d99.webp', '0c258b884b097c30c70cf0241c7abe2b.webp', 'bfefa1f8dbadf8e21884553b885be03c.webp', '07958960eef1c54dd4777b2d4e1822e1.webp', '5fc1ca1e13184c9d6f425d870c7f5ac6.webp', 'f7cbb30f4761c7cced93773078cfebb6.webp', '5f8bcdaf48551f8ce3f62e2d15b72087.webp', NULL, NULL, 'dd01418ac19014223a21ec84c81f68f9.webp', '5afbe8fa7c777fa932fb0ae17a082089.webp', '2214fcfd37e99728cf792119da726d5d.webp', '2ba528197b3ca10368b015fcd8e572c2.pdf', 'd6537ec6ad9c7260952e4f69c288769c.webp', '[\"+90 236 462 12 50\",\"+90 232 463 44 69\"]', '[\"\",\"\"]', '[\"+90 236 462 12 50\",\"\"]', 'info@didemdavetiye.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Mutfak Yapım olarak sosyal medya, dijital pazarlama, web tasarım ve prodüksiyon alanlarında faaliyet gösteren İzmir merkezli bir reklam şirketiyiz.', '', '', 1, '2020-07-22 20:57:22', '2023-05-29 08:18:19', 1, 'tr', 'emrekilic@mutfakyapim.com', 'MutfakYapim35?');
 
 -- --------------------------------------------------------
 
@@ -1236,7 +1256,7 @@ CREATE TABLE `user_role` (
 --
 
 INSERT INTO `user_role` (`id`, `title`, `permissions`, `isActive`, `isCover`, `rank`, `createdAt`, `updatedAt`) VALUES
-(1, 'Admin', '{\"blogs\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"blog_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"dashboard\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"emailsettings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"galleries\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"menus\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"pages\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"products\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"product_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"services\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"service_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"settings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"slides\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"userop\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"users\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"user_role\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"}}', 1, 1, 1, '2020-07-22 20:58:34', '2023-05-29 11:34:30');
+(1, 'Admin', '{\"blogs\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"blog_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"dashboard\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"emailsettings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"galleries\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"menus\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"our_works\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"pages\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"products\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"product_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"services\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"service_categories\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"settings\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"slides\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"userop\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"users\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"},\"user_role\":{\"read\":\"on\",\"write\":\"on\",\"update\":\"on\",\"delete\":\"on\"}}', 1, 1, 1, '2020-07-22 20:58:34', '2023-05-30 08:13:50');
 
 -- --------------------------------------------------------
 
@@ -1528,7 +1548,7 @@ ALTER TABLE `home_items`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `instagram_posts`
@@ -1564,7 +1584,7 @@ ALTER TABLE `linguo_language_strings`
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `our_works`
@@ -1576,7 +1596,7 @@ ALTER TABLE `our_works`
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -1600,7 +1620,7 @@ ALTER TABLE `product_categories`
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `services`
