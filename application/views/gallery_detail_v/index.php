@@ -30,7 +30,7 @@
                                     <div class="product__img">
                                         <img width="1000" height="1000" data-src="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $gallery->img_url) ?>" class="img-fluid lazyload" alt="<?= $value->title ?>" title="<?= $value->title ?>" />
                                     </div>
-                                    <div class="product__content text-center pt-30">
+                                    <div class="product__content text-center pt-30 pb-30">
                                         <h4 class="pro-title"><a rel="dofollow" href="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" alt="<?= $value->title ?>" <?= (!empty($extension) && $extension != "pdf" ? "download='" . (!empty($value->title) ? $value->title . "." . $extension : null) . "'" : "target='_blank'") ?>><?= !empty($value->title) && !empty($extension) ? $value->title . "." . $extension : $value->url ?></a></h4>
                                         <div>
                                             <a class="btn" rel="dofollow" href="<?= get_picture("galleries_v/{$gallery->gallery_type}/{$gallery->folder_name}", $value->url) ?>" alt="<?= $value->title ?>" <?= (!empty($extension) && $extension != "pdf" ? "download='" . (!empty($value->title) ? $value->title . "." . $extension : null) . "'" : "target='_blank'") ?>><i class="fa fa-download"></i> </a>
@@ -59,7 +59,7 @@
                                         </a>
                                     </div>
                                     <?php if (!empty($value->title) || !empty($value->description)) : ?>
-                                        <div class="product__content text-center pt-30">
+                                        <div class="product__content text-center pt-30 pb-30">
                                             <h4 class="pro-title"><a href="<?= base_url(lang("routes_galleries") . "/" . lang("routes_gallery") . "/" . $value->url) ?>" rel="dofollow" title="<?= lang("viewService") ?>"><?= $value->title ?></a></h4>
                                             <p><?= $value->description ?></p>
                                         </div>

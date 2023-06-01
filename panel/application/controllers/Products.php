@@ -88,7 +88,7 @@ class Products extends MY_Controller
     public function save()
     {
         $data = rClean($this->input->post());
-        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] !== "description") :
+        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] !== "description" && checkEmpty($data)["key"] !== "price" && checkEmpty($data)["key"] !== "discounted_price") :
             $key = checkEmpty($data)["key"];
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Ürün Güncelleştirilirken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
         else :
@@ -136,7 +136,7 @@ class Products extends MY_Controller
     public function update($id)
     {
         $data = $this->input->post();
-        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] !== "description") :
+        if (checkEmpty($data)["error"] && checkEmpty($data)["key"] !== "description" && checkEmpty($data)["key"] !== "price" && checkEmpty($data)["key"] !== "discounted_price") :
             $key = checkEmpty($data)["key"];
             echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Ürün Güncelleştirilirken Hata Oluştu. \"{$key}\" Bilgisini Doldurduğunuzdan Emin Olup Tekrar Deneyin."]);
         else :

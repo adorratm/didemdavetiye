@@ -143,10 +143,11 @@ a:hover,
     box-shadow: none;
 }
 
-a,
+a,ins,
 button {
     color: #00173c;
     outline: medium none;
+    text-decoration: none;
 }
 
 a:hover {
@@ -1557,7 +1558,7 @@ label {
     line-height: 60px;
     border: none;
     text-align: center;
-    z-index: 9;
+    z-index: 1;
     cursor: pointer;
     padding: 0;
     background: none;

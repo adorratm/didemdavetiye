@@ -109,7 +109,7 @@ class Products extends MY_Controller
         $wheres["p.lang"] = $this->viewData->lang;
         $joins = ["products_w_categories pwc" => ["p.id = pwc.product_id", "left"], "product_categories pc" => ["pwc.category_id = pc.id", "left"], "product_images pi" => ["pi.product_id = p.id", "left"]];
 
-        $select = "p.title,p.id, p.seo_url,pi.url img_url,p.isActive";
+        $select = "p.price,p.discounted_price,p.title,p.id, p.seo_url,pi.url img_url,p.isActive";
         $distinct = true;
         $groupBy = ["p.id", "pwc.product_id"];
         /**
@@ -204,7 +204,7 @@ class Products extends MY_Controller
         $wheres["p.isActive"] = 1;
         $wheres["p.lang"] = $this->viewData->lang;
         $joins = ["products_w_categories pwc" => ["p.id = pwc.product_id", "left"], "product_categories pc" => ["pwc.category_id = pc.id", "left"], "product_images pi" => ["pi.product_id = p.id", "left"]];
-        $select = "pc.title category_title,pc.seo_url category_seo_url,p.id,p.title,p.seo_url,pi.url img_url,p.description,p.isActive";
+        $select = "p.price,p.discounted_price,pc.title category_title,pc.seo_url category_seo_url,p.id,p.title,p.seo_url,pi.url img_url,p.description,p.isActive";
         $distinct = true;
         $groupBy = ["p.id", "pwc.product_id"];
         $wheres['p.seo_url'] =  $seo_url;

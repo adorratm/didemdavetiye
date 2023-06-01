@@ -88,7 +88,7 @@
                         <div class="logo">
                             <a rel="dofollow" href="<?= base_url() ?>" title="<?= $settings->company_name ?>">
                                 <picture>
-                                    <img style="filter: drop-shadow(1px 1px 1px black);" width="220" height="58" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
+                                    <img width="220" height="58" data-src="<?= get_picture("settings_v", $settings->logo) ?>" alt="<?= $settings->company_name ?>" class="lazyload img-fluid">
                                 </picture>
                             </a>
                         </div>

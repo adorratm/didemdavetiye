@@ -62,6 +62,14 @@
                         <p><?= $settings->company_name ?></p>
                         <h1><?= $product->title ?></h1>
                     </div>
+                    <div class="product-cat mt-30 mb-30">
+                        <?php if (!empty($product->price) || !empty($product->discounted_price)) : ?>
+                            <ins class="fw-bold fs-5 me-2"><?= !empty($product->discounted_price) ? $product->discounted_price : $product->price ?> <?= $symbol ?></ins>
+                        <?php endif ?>
+                        <?php if (!empty($product->discounted_price) && $product->discounted_price > 0) : ?>
+                            <del><?= $product->price ?> <?= $symbol ?></del>
+                        <?php endif ?>
+                    </div>
                     <?= $product->description ?>
                     <?php if ($product->category_title) : ?>
                         <div class="product-cat mt-30 mb-30">

@@ -21,13 +21,13 @@
             <?php if (!empty($product_categories)) : ?>
                 <?php foreach ($product_categories as $k => $v) : ?>
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="product">
+                        <div class="product h-100 border">
                             <div class="product__img">
                                 <a href="<?= base_url(lang("routes_products") . "/" . $v->seo_url) ?>" rel="dofollow" title="<?= lang("viewProduct") ?>">
                                     <img width="1000" height="1000" data-src="<?= get_picture("product_categories_v", $v->img_url) ?>" class="img-fluid lazyload" alt="<?= $v->title ?>" title="<?= $v->title ?>" />
                                 </a>
                             </div>
-                            <div class="product__content text-center pt-30">
+                            <div class="product__content text-center pt-30 pb-30">
                                 <h4 class="pro-title"><a href="<?= base_url(lang("routes_products") . "/" . $v->seo_url) ?>" rel="dofollow" title="<?= lang("viewProduct") ?>"><?= $v->title ?></a></h4>
                             </div>
                         </div>

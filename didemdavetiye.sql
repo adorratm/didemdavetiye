@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 31, 2023 at 04:00 PM
+-- Generation Time: Jun 01, 2023 at 11:15 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -814,6 +814,8 @@ CREATE TABLE `products` (
   `title` varchar(255) DEFAULT NULL,
   `description` longtext DEFAULT NULL,
   `seo_url` varchar(255) DEFAULT NULL,
+  `price` float DEFAULT NULL,
+  `discounted_price` float DEFAULT NULL,
   `lang` char(2) NOT NULL DEFAULT 'tr',
   `rank` bigint(20) NOT NULL DEFAULT 1,
   `isActive` tinyint(1) NOT NULL DEFAULT 1,
@@ -825,17 +827,17 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `title`, `description`, `seo_url`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
-(1, 'Bay-Bayan Lazer Epilasyon', NULL, 'bay-bayan-lazer-epilasyon', 'tr', 1, 1, '2023-03-19 21:47:07', '2023-05-08 08:36:41'),
-(2, 'G5 Selülit Masajı', NULL, 'g5-selulit-masaji', 'tr', 1, 1, '2023-03-19 21:47:07', '2023-05-08 08:36:52'),
-(3, 'Bölgesel Zayıflama', NULL, 'bolgesel-zayiflama', 'tr', 3, 1, '2023-03-20 08:07:15', '2023-05-08 08:37:03'),
-(4, 'EMS İle Bölgesel Vücut Şekillendirme', NULL, 'ems-ile-bolgesel-vucut-sekillendirme', 'tr', 4, 1, '2023-03-20 08:07:26', '2023-05-08 08:37:23'),
-(5, 'Medical Cilt Bakımı', NULL, 'medical-cilt-bakimi', 'tr', 5, 1, '2023-03-20 08:07:34', '2023-05-08 08:37:33'),
-(6, 'Cilt Bakımı', NULL, 'cilt-bakimi', 'tr', 6, 1, '2023-03-20 08:07:50', '2023-05-08 09:14:46'),
-(7, 'Medikal Masaj', NULL, 'medikal-masaj', 'tr', 7, 1, '2023-03-20 08:08:00', '2023-05-08 09:14:48'),
-(8, 'Aroma Terapi', NULL, 'aroma-terapi', 'tr', 8, 1, '2023-03-20 08:08:21', '2023-05-08 09:14:49'),
-(9, 'Sıcak Yağ Masajı', NULL, 'sicak-yag-masaji', 'tr', 9, 1, '2023-03-20 08:08:34', '2023-05-08 09:14:51'),
-(10, 'İsveç Masajı', NULL, 'isvec-masaji', 'tr', 10, 1, '2023-03-20 08:08:42', '2023-05-08 09:14:52');
+INSERT INTO `products` (`id`, `title`, `description`, `seo_url`, `price`, `discounted_price`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`) VALUES
+(1, 'Bay-Bayan Lazer Epilasyon', NULL, 'bay-bayan-lazer-epilasyon', 200, 150, 'tr', 1, 1, '2023-03-19 21:47:07', '2023-06-01 08:20:03'),
+(2, 'G5 Selülit Masajı', NULL, 'g5-selulit-masaji', 0, 0, 'tr', 1, 1, '2023-03-19 21:47:07', '2023-06-01 08:30:29'),
+(3, 'Bölgesel Zayıflama', NULL, 'bolgesel-zayiflama', NULL, NULL, 'tr', 3, 1, '2023-03-20 08:07:15', '2023-05-08 08:37:03'),
+(4, 'EMS İle Bölgesel Vücut Şekillendirme', NULL, 'ems-ile-bolgesel-vucut-sekillendirme', NULL, NULL, 'tr', 4, 1, '2023-03-20 08:07:26', '2023-05-08 08:37:23'),
+(5, 'Medical Cilt Bakımı', NULL, 'medical-cilt-bakimi', NULL, NULL, 'tr', 5, 1, '2023-03-20 08:07:34', '2023-05-08 08:37:33'),
+(6, 'Cilt Bakımı', NULL, 'cilt-bakimi', NULL, NULL, 'tr', 6, 1, '2023-03-20 08:07:50', '2023-05-08 09:14:46'),
+(7, 'Medikal Masaj', NULL, 'medikal-masaj', NULL, NULL, 'tr', 7, 1, '2023-03-20 08:08:00', '2023-05-08 09:14:48'),
+(8, 'Aroma Terapi', NULL, 'aroma-terapi', NULL, NULL, 'tr', 8, 1, '2023-03-20 08:08:21', '2023-05-08 09:14:49'),
+(9, 'Sıcak Yağ Masajı', NULL, 'sicak-yag-masaji', NULL, NULL, 'tr', 9, 1, '2023-03-20 08:08:34', '2023-05-08 09:14:51'),
+(10, 'İsveç Masajı', NULL, 'isvec-masaji', NULL, NULL, 'tr', 10, 1, '2023-03-20 08:08:42', '2023-05-08 09:14:52');
 
 -- --------------------------------------------------------
 
@@ -854,8 +856,10 @@ CREATE TABLE `products_w_categories` (
 --
 
 INSERT INTO `products_w_categories` (`id`, `product_id`, `category_id`) VALUES
-(1, 1, 1),
-(2, 1, 2);
+(3, 1, 1),
+(4, 1, 2),
+(5, 2, 3),
+(6, 2, 4);
 
 -- --------------------------------------------------------
 
@@ -1194,11 +1198,9 @@ CREATE TABLE `slides` (
 --
 
 INSERT INTO `slides` (`id`, `title`, `description`, `img_url`, `mobile_url`, `allowButton`, `button_url`, `target`, `button_caption`, `video_url`, `video_caption`, `page_id`, `category_id`, `product_category_id`, `product_id`, `service_id`, `sector_id`, `lang`, `rank`, `isActive`, `createdAt`, `updatedAt`, `sharedAt`) VALUES
-(1, NULL, '', '68f49777daeaaa9a392c32e5209f2424.webp', NULL, 0, '#', '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 1, 1, '2023-03-24 08:04:07', '2023-05-08 13:46:04', '2023-03-24 08:03:55'),
-(2, NULL, '', '616bb2bf2b280a1dba6d8b39342c9089.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 2, 1, '2023-03-24 08:04:19', '2023-05-08 13:45:56', '2023-03-24 08:04:10'),
-(3, NULL, '', 'df0a1040949b566e6ecabecefae69e0a.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 3, 1, '2023-03-24 08:04:32', '2023-05-08 13:45:57', '2023-03-24 08:04:22'),
-(4, NULL, '', '400a6d6f112ad56f016986b20e50dbca.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 4, 1, '2023-03-24 08:05:26', '2023-05-08 13:45:58', '2023-03-24 08:05:16'),
-(5, NULL, '', '3ef88036bc8375c86d2daf25250b393c.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 5, 1, '2023-03-24 08:05:38', '2023-05-08 13:46:00', '2023-03-24 08:05:28');
+(1, NULL, '', 'cf97bc3c4dc40e3013de98fa781b1616.webp', NULL, 0, '#', '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 1, 1, '2023-03-24 08:04:07', '2023-06-01 08:15:27', '2023-03-24 08:03:55'),
+(2, NULL, '', 'f3341454c8c66fa8825c79dd363ccc4d.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 2, 1, '2023-03-24 08:04:19', '2023-06-01 08:15:32', '2023-03-24 08:04:10'),
+(3, NULL, '', '5bff31a14b5796b58d32479f139da77e.webp', NULL, 0, NULL, '_self', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'tr', 3, 1, '2023-03-24 08:04:32', '2023-06-01 08:15:38', '2023-03-24 08:04:22');
 
 -- --------------------------------------------------------
 
@@ -1608,7 +1610,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `products_w_categories`
 --
 ALTER TABLE `products_w_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `product_categories`

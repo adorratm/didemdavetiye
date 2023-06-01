@@ -92,6 +92,7 @@ class Settings extends MY_Controller
             $about_logo = upload_picture("about_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $gallery_logo = upload_picture("gallery_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $product_logo = upload_picture("product_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
+            $product_detail_logo = upload_picture("product_detail_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $service_detail_logo = upload_picture("service_detail_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $gallery_logo = upload_picture("gallery_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
             $category_logo = upload_picture("category_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
@@ -129,6 +130,9 @@ class Settings extends MY_Controller
             endif;
             if ($product_logo["success"]) :
                 $data["product_logo"] = $product_logo["file_name"];
+            endif;
+            if ($product_detail_logo["success"]) :
+                $data["product_detail_logo"] = $product_detail_logo["file_name"];
             endif;
             if ($service_detail_logo["success"]) :
                 $data["service_detail_logo"] = $service_detail_logo["file_name"];
@@ -300,6 +304,15 @@ class Settings extends MY_Controller
                         $data["product_logo"] = $image["file_name"];
                     else :
                         echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Ayar Güncelleştirilirken Hata Oluştu. Ürün Logosu Seçtiğinizden Emin Olup, Lütfen Tekrar Deneyin."]);
+                        die();
+                    endif;
+                endif;
+                if (!empty($_FILES["product_detail_logo"]["name"])) :
+                    $image = upload_picture("product_detail_logo", "uploads/$this->viewFolder",["width" => 1920, "height" => 200],"*");
+                    if ($image["success"]) :
+                        $data["product_detail_logo"] = $image["file_name"];
+                    else :
+                        echo json_encode(["success" => false, "title" => "Başarısız!", "message" => "Ayar Güncelleştirilirken Hata Oluştu. Ürün Detay Logosu Seçtiğinizden Emin Olup, Lütfen Tekrar Deneyin."]);
                         die();
                     endif;
                 endif;

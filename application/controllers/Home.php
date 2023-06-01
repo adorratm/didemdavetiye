@@ -48,25 +48,15 @@ class Home extends MY_Controller
          * Home Items
          */
         $this->viewData->homeitemsFooter = $this->general_model->get_all("home_items", null, "rank ASC", ["isActive" => 1, "lang" => $this->viewData->lang], [], [], [4, 4]);
+
         /**
-         * Instagram Posts
+         * Product Categories
          */
-        $this->viewData->instagramPosts = $this->general_model->get_all("instagram_posts", null, "id ASC");
-        /**
-         * Service Categories
-         */
-        $wheres["s.isActive"] = 1;
-        $wheres["si.isCover"] = 1;
-        $wheres["s.lang"] = $this->viewData->lang;
-        $joins = ["service_categories sc" => ["s.category_id = sc.id", "left"], "service_images si" => ["si.service_id = s.id", "left"]];
-        $select = "s.id,s.title,s.seo_url,si.url img_url,s.description";
-        $distinct = true;
-        $groupBy = ["s.id"];
-        $this->viewData->services = $this->general_model->get_all("services s", $select, "s.id DESC", $wheres, [], $joins, [12], [], $distinct, $groupBy);
+        $this->viewData->menuCategories = $this->general_model->get_all("product_categories pc", null, "pc.rank ASC", ["pc.isActive" => 1, "pc.lang" => $this->viewData->lang,"pc.top_id" => 0],[],[]);
         /**
          * Our Works
          */
-        $this->viewData->our_works = $this->general_model->get_all("our_works", null, "rand()", ["isActive" => 1, "lang" => $this->viewData->lang], [], [], [20]);
+        $this->viewData->our_works = $this->general_model->get_all("our_works", null, "rand()", ["isActive" => 1, "lang" => $this->viewData->lang], [], [], []);
 
         $this->viewData->meta_title = clean(strto("lower|ucwords", lang("home"))) . " - " . $this->viewData->settings->company_name;
         $this->viewData->meta_desc  = str_replace("”", "\"", @stripslashes($this->viewData->settings->meta_description));

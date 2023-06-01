@@ -9,6 +9,20 @@
         </div>
     </div>
     <div class="row">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="form-group">
+                <label>Ürün Fiyatı</label>
+                <input type="number" class="form-control form-control-sm rounded-0" placeholder="Ürün Fiyatı" name="price" value="<?= !empty($item->price) ? $item->price : null ?>" required>
+            </div>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="form-group">
+                <label>İndirimli Fiyatı</label>
+                <input type="number" class="form-control form-control-sm rounded-0" placeholder="İndirimli Fiyatı" name="discounted_price" value="<?= !empty($item->discounted_price) ? $item->discounted_price : null ?>" required>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="form-group">
                 <label>Açıklama</label>
